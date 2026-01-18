@@ -6,11 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WHY KOBA | Koba Organics</title>
 
-  <!-- Switzer Font (via CSS import) -->
+  <!-- Switzer Font -->
   <link href="https://fonts.googleapis.com/css2?family=Switzer:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* Global Styles */
     body {
       font-family: 'Switzer', sans-serif;
       line-height: 1.6;
@@ -18,38 +17,54 @@
       padding: 20px;
       background-color: #FFEEDB;
       color: #794000;
-      font-weight: 700; /* Make all text bold */
+      font-weight: 700;
     }
 
-    /* Force all main elements to bold */
     h1, h2, h3, p, a, th, td, .feature-box {
       font-weight: 700 !important;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .logo-button {
+      text-decoration: none;
+      color: #794000;
+      font-size: 22px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .logo-button span {
+      font-size: 12px;
+      letter-spacing: 6px;
+      display: block;
+      margin-top: -5px;
     }
 
     h1 {
       text-align: center;
       margin-bottom: 30px;
       text-transform: uppercase;
-      color: #794000;
     }
 
     h2 {
       margin-top: 30px;
-      color: #794000;
     }
 
     h3 {
       margin-top: 20px;
-      color: #794000;
     }
 
     p {
       margin-bottom: 15px;
       font-size: 16px;
-      color: #794000;
     }
 
-    /* Feature Boxes */
     .feature-box {
       border-radius: 10px;
       padding: 20px;
@@ -57,20 +72,16 @@
       background-color: #FFF0E0;
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
       font-size: 16px;
-      color: #794000;
     }
 
-    /* Table Styling */
     table {
       border-collapse: collapse;
       width: 100%;
       margin-top: 20px;
       font-size: 16px;
-      color: #794000;
     }
 
-    th,
-    td {
+    th, td {
       border: 1px solid #794000;
       padding: 10px;
       text-align: left;
@@ -80,20 +91,17 @@
       background-color: #FFEEDB;
     }
 
-    /* Back to Home Link */
     a {
       display: inline-block;
       margin-top: 25px;
       text-decoration: none;
       color: #794000;
-      font-family: 'Switzer', sans-serif;
     }
 
     a:hover {
       text-decoration: underline;
     }
 
-    /* Responsive for Mobile */
     @media (max-width: 600px) {
       body {
         padding: 15px;
@@ -112,6 +120,14 @@
 
 <body>
 
+  <!-- Header with Home Button -->
+  <div class="header">
+    <a href="index.html" class="logo-button">
+      KOBA
+      <span>ORGANICS</span>
+    </a>
+  </div>
+
   <h1>WHY KOBA</h1>
 
   <h2>Fizz that hits different. Sip bold. Feel unstoppable.</h2>
@@ -126,23 +142,23 @@
   <h2>What makes KOBA… KOBA</h2>
 
   <div class="feature-box">
-    🔥 <strong>Bold Flavours, No Compromises:</strong> Gooseberry sparkle. Pineapple sweetness. Turmeric with attitude. Layered, punchy flavours that taste fresh, balanced, and never boring.
+    🔥 <strong>Bold Flavours, No Compromises:</strong> Gooseberry sparkle. Pineapple sweetness. Turmeric with attitude.
   </div>
 
   <div class="feature-box">
-    😌 <strong>Smooth, Not Vinegary:</strong> We’ve fine-tuned our fermentation so KOBA stays bright and refreshing — not harsh, not overpowering, and definitely not vinegary. Just clean fizz with a crisp finish.
+    😌 <strong>Smooth, Not Vinegary:</strong> Clean fizz with a crisp finish — never harsh.
   </div>
 
   <div class="feature-box">
-    🌱 <strong>Gut-Friendly by Nature:</strong> Packed with live probiotics that support your gut microbiome — the little legends behind digestion, energy, and how good you feel day to day.
+    🌱 <strong>Gut-Friendly by Nature:</strong> Packed with live probiotics.
   </div>
 
   <div class="feature-box">
-    🍃 <strong>Clean & Organic:</strong> No added sugar. 100% organic ingredients. No weird stuff. Ever. Because your gut deserves better than shortcuts.
+    🍃 <strong>Clean & Organic:</strong> No added sugar. 100% organic ingredients.
   </div>
 
   <h3>💬 The KOBA Promise</h3>
-  <p>We don’t do bland. We don’t do fake. We don’t do kombucha that tastes like regret. We do bold, balanced, feel-good fizz — every single time.</p>
+  <p>We don’t do bland. We don’t do fake. We do bold, balanced, feel-good fizz.</p>
 
   <h3>NUTRITION INFORMATION</h3>
 
@@ -184,8 +200,5 @@
     </tr>
   </table>
 
-  <a href="index.html">Back to Home</a>
-
 </body>
-
 </html>
