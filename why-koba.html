@@ -5,19 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WHY KOBA | Koba Organics</title>
   
-  <!-- Switzer – great modern sans, very popular in AU wellness brands -->
+  <!-- Switzer – modern, clean, widely used in AU wellness brands -->
   <link href="https://fonts.googleapis.com/css2?family=Switzer:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
-    /* =====================
-       BASE STYLES
-       ===================== */
     :root {
-      --bg: #FFF8F0;           /* softer warm off-white/peach */
+      --bg: #FFF8F0;           /* soft warm off-white */
       --text: #5C2F00;         /* rich warm brown */
-      --accent: #8B4513;       /* deeper cinnamon accent if needed */
-      --box-bg: #FFFBF5;       /* very light cream */
-      --border: #D9BFA0;       /* soft terracotta border */
+      --accent: #8B4513;
+      --box-bg: #FFFBF5;       /* ultra light cream */
+      --border: #E0C9B0;       /* softer border */
     }
 
     * {
@@ -26,12 +23,13 @@
 
     body {
       font-family: 'Switzer', system-ui, -apple-system, sans-serif;
-      line-height: 1.65;
+      line-height: 1.68;
       margin: 0;
-      padding-top: 100px;      /* space for fixed header */
+      padding-top: 100px;
       background-color: var(--bg);
       color: var(--text);
       font-weight: 400;
+      font-size: 1.125rem;     /* base larger for better readability */
     }
 
     /* =====================
@@ -43,52 +41,63 @@
       left: 0;
       width: 100%;
       background-color: var(--bg);
-      padding: 1.4rem 5%;
+      padding: 1.5rem 6%;
       z-index: 1000;
       display: flex;
       align-items: center;
-      border-bottom: 1px solid rgba(92, 47, 0, 0.08);
-      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(92, 47, 0, 0.07);
+      backdrop-filter: blur(10px);
     }
 
     .logo-link img {
-      height: 48px;
+      height: 52px;            /* slightly larger logo for premium feel */
       width: auto;
     }
 
     /* =====================
-       TYPOGRAPHY
+       MAIN CONTENT WRAPPER – key fix for spacing
+       ===================== */
+    main.why-koba {
+      max-width: 1100px;       /* wider = more balanced left/right space */
+      margin: 0 auto;
+      padding: 0 6% 4rem;      /* generous side padding → matches many premium sites */
+    }
+
+    /* =====================
+       TYPOGRAPHY – noticeably larger & bolder
        ===================== */
     h1 {
-      font-size: clamp(2.6rem, 7vw, 4.2rem);
+      font-size: clamp(3.8rem, 9vw, 5.8rem);
       font-weight: 700;
       text-align: center;
-      margin: 0 0 1.2rem;
-      letter-spacing: -0.02em;
+      margin: 0 0 1.5rem;
+      letter-spacing: -0.03em;
       text-transform: uppercase;
-      color: var(--text);
+      line-height: 1.05;
     }
 
     h2 {
-      font-size: clamp(1.9rem, 5vw, 2.8rem);
+      font-size: clamp(2.6rem, 6vw, 3.8rem);
       font-weight: 600;
-      margin: 3.5rem 0 1.5rem;
-      letter-spacing: -0.01em;
+      margin: 4rem 0 1.8rem;
+      letter-spacing: -0.015em;
+      line-height: 1.15;
     }
 
     h3 {
-      font-size: 1.5rem;
+      font-size: 2.1rem;
       font-weight: 600;
-      margin: 2.5rem 0 1rem;
+      margin: 3rem 0 1.2rem;
     }
 
     p {
-      font-size: 1.125rem;
-      margin-bottom: 1.4rem;
-      max-width: 680px;
+      font-size: 1.2rem;       /* larger body text – feels more like premium homepage */
+      margin-bottom: 1.6rem;
+      max-width: 760px;
     }
 
     strong {
+      font-weight: 700;
       color: var(--text);
     }
 
@@ -97,84 +106,74 @@
        ===================== */
     .feature-list {
       display: grid;
-      gap: 1.5rem;
-      margin: 2.5rem 0;
-      max-width: 720px;
+      gap: 1.8rem;
+      margin: 3rem 0;
     }
 
     .feature-box {
       background-color: var(--box-bg);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.8rem 2rem;
-      font-size: 1.125rem;
-      line-height: 1.5;
-      box-shadow: 0 4px 12px rgba(92, 47, 0, 0.04);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border-radius: 20px;
+      padding: 2.2rem 2.5rem;
+      font-size: 1.25rem;
+      line-height: 1.55;
+      box-shadow: 0 6px 16px rgba(92, 47, 0, 0.05);
+      transition: all 0.25s ease;
     }
 
     .feature-box:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(92, 47, 0, 0.08);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(92, 47, 0, 0.09);
     }
 
     .feature-box strong {
       display: block;
-      font-size: 1.25rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.45rem;
+      margin-bottom: 0.7rem;
     }
 
     /* =====================
-       TABLE – cleaner & more modern
+       NUTRITION TABLE
        ===================== */
     .nutrition-table {
       width: 100%;
-      max-width: 680px;
-      margin: 2.5rem auto;
+      max-width: 760px;
+      margin: 3rem auto;
       border-collapse: collapse;
-      font-size: 1.05rem;
+      font-size: 1.15rem;
     }
 
     .nutrition-table th,
     .nutrition-table td {
-      padding: 14px 16px;
+      padding: 16px 20px;
       text-align: left;
       border-bottom: 1px solid var(--border);
     }
 
     .nutrition-table th {
-      background-color: rgba(255, 251, 245, 0.6);
+      background-color: rgba(255, 251, 245, 0.7);
       font-weight: 600;
       text-transform: uppercase;
-      font-size: 0.95rem;
-      letter-spacing: 0.04em;
-    }
-
-    .nutrition-table td:first-child {
-      font-weight: 500;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: underline;
-      text-underline-offset: 3px;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
     }
 
     /* =====================
-       MOBILE
+       MOBILE ADJUSTMENTS
        ===================== */
-    @media (max-width: 768px) {
-      body { padding-top: 80px; }
-      .header { padding: 1.2rem 6%; }
-      .logo-link img { height: 42px; }
-      h1 { font-size: 3.2rem; }
-      .feature-box { padding: 1.6rem; }
+    @media (max-width: 900px) {
+      main.why-koba { padding: 0 7%; }
+      .header { padding: 1.3rem 7%; }
+      .logo-link img { height: 46px; }
     }
 
-    @media (max-width: 480px) {
-      h1 { font-size: 2.8rem; }
-      h2 { font-size: 2.2rem; }
-      p, .feature-box { font-size: 1.05rem; }
+    @media (max-width: 600px) {
+      body { padding-top: 85px; font-size: 1.05rem; }
+      h1 { font-size: 3.4rem; }
+      h2 { font-size: 2.6rem; }
+      h3 { font-size: 1.9rem; }
+      .feature-box { padding: 1.8rem; font-size: 1.15rem; }
+      main.why-koba { padding: 0 8%; }
     }
   </style>
 </head>
@@ -187,7 +186,7 @@
     </a>
   </div>
 
-  <main class="why-koba" style="max-width: 920px; margin: 0 auto; padding: 0 5%;">
+  <main class="why-koba">
 
     <h1>WHY KOBA</h1>
 
@@ -235,36 +234,13 @@
         <th>PER 100ML</th>
         <th>PER SERVE (350ML)</th>
       </tr>
-      <tr>
-        <td>ENERGY</td>
-        <td>50 kJ</td>
-        <td>175 kJ</td>
-      </tr>
-      <tr>
-        <td>PROTEIN</td>
-        <td>&lt;1 g</td>
-        <td>&lt;0.35 g</td>
-      </tr>
-      <tr>
-        <td>FAT, TOTAL<br>— SATURATED</td>
-        <td>&lt;1 g<br>— &lt;1 g</td>
-        <td>&lt;0.35 g<br>— &lt;0.35 g</td>
-      </tr>
-      <tr>
-        <td>CARBOHYDRATE<br>— SUGARS</td>
-        <td>2.9 g<br>— 2.9 g</td>
-        <td>10 g<br>— 10 g</td>
-      </tr>
-      <tr>
-        <td>DIETARY FIBRE</td>
-        <td>&lt;1 g</td>
-        <td>&lt;0.35 g</td>
-      </tr>
-      <tr>
-        <td>SODIUM</td>
-        <td>2 mg</td>
-        <td>7 mg</td>
-      </tr>
+      <!-- ... rest of table rows unchanged ... -->
+      <tr><td>ENERGY</td><td>50 kJ</td><td>175 kJ</td></tr>
+      <tr><td>PROTEIN</td><td>&lt;1 g</td><td>&lt;0.35 g</td></tr>
+      <tr><td>FAT, TOTAL<br>— SATURATED</td><td>&lt;1 g<br>— &lt;1 g</td><td>&lt;0.35 g<br>— &lt;0.35 g</td></tr>
+      <tr><td>CARBOHYDRATE<br>— SUGARS</td><td>2.9 g<br>— 2.9 g</td><td>10 g<br>— 10 g</td></tr>
+      <tr><td>DIETARY FIBRE</td><td>&lt;1 g</td><td>&lt;0.35 g</td></tr>
+      <tr><td>SODIUM</td><td>2 mg</td><td>7 mg</td></tr>
     </table>
 
   </main>
