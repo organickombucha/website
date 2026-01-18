@@ -40,7 +40,7 @@
       padding: 0 6%;
       display: flex;
       align-items: center;
-      justify-content: space-between; /* Button right, logo center */
+      justify-content: space-between; /* Logo center, button right */
       border-bottom: 1px solid rgba(107, 62, 0, 0.08);
       backdrop-filter: blur(10px);
       z-index: 1000;
@@ -59,12 +59,12 @@
       background-color: transparent !important;
       mix-blend-mode: multiply;
     }
-    /* Exact BUY button styling from homepage */
+    /* Exact BUY button from homepage - same size, color, animation, arrow */
     .button {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.8rem 1.8rem; /* Matches homepage button size */
+      padding: 0.8rem 1.8rem;
       background-color: #246A1E;
       color: white;
       text-decoration: none;
@@ -82,7 +82,7 @@
     }
     .button_text {
       position: relative;
-      min-width: 3ch; /* Ensures text doesn't jump */
+      min-width: 3ch;
     }
     .button_text_content {
       position: absolute;
@@ -205,6 +205,9 @@
       main.why-koba { padding: 1rem 8% 4rem; }
       .feature-title { font-size: 2.2rem; }
       .intro-bold, .feature-subtext, .promise-bold { font-size: 1.3rem; }
+      .header { justify-content: center; }
+      .button { order: 1; margin: 0 auto; }
+      .logo-link { order: 2; }
     }
   </style>
 </head>
@@ -215,7 +218,7 @@
       <img src="images/webclip.png" alt="Koba Organics Logo">
     </a>
 
-    <!-- BUY button on right-hand side - exact match to homepage -->
+    <!-- BUY button on RIGHT side - exact match to homepage -->
     <a href="#" class="button">
       <div class="button_text">
         <p class="button_text_content is-1">BUY</p>
