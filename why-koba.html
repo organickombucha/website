@@ -45,17 +45,11 @@
       backdrop-filter: blur(10px);
       z-index: 1000;
     }
-    /* Top-centre "KOBA ORGANICS" now acts as homepage button */
     .logo-link {
       display: block;
       line-height: 0;
       flex: 1;
       text-align: center;
-      transition: all 0.3s ease;
-    }
-    .logo-link:hover {
-      transform: scale(1.05);
-      filter: brightness(1.1);
     }
     .logo-link img {
       height: var(--logo-height);
@@ -65,7 +59,6 @@
       background-color: transparent !important;
       mix-blend-mode: multiply;
     }
-    /* BUY button on right (unchanged) */
     .button {
       display: inline-flex;
       align-items: center;
@@ -141,14 +134,21 @@
       margin: 6rem 0 1.2rem;
       color: var(--text);
     }
-    .intro-bold,
-    .feature-subtext,
-    .promise-bold {
+    /* Reference style - used for "For new, bold flavours..." */
+    .intro-bold {
       font-size: 1.65rem;
       line-height: 1.68;
       font-weight: 700;
       margin-bottom: 1.6rem;
       color: var(--text-opacity);
+    }
+    /* All requested sub-lines now match the exact same size/font as above */
+    .feature-subtext,
+    .promise-bold {
+      font-size: 1.65rem !important;
+      line-height: 1.68 !important;
+      font-weight: 700 !important;
+      color: var(--text-opacity) !important;
     }
     .feature-title {
       font-size: 3rem;
@@ -216,12 +216,10 @@
 </head>
 <body>
   <div class="header">
-    <!-- Top-centre "KOBA ORGANICS" image is now the homepage button -->
     <a href="/" class="logo-link">
-      <img src="images/webclip.png" alt="Koba Organics - Click to go home">
+      <img src="images/webclip.png" alt="Koba Organics Logo">
     </a>
 
-    <!-- BUY button on right (unchanged) -->
     <a href="#" class="button">
       <div class="button_text">
         <p class="button_text_content is-1">BUY</p>
@@ -257,19 +255,19 @@
     <div class="feature-list">
       <div class="feature-box">
         <strong class="feature-title">🔥 Bold Flavours, No Compromises</strong>
-        Gooseberry sparkle. Pineapple sweetness. Turmeric with attitude.
+        <div class="feature-subtext">Gooseberry sparkle. Pineapple sweetness. Turmeric with attitude.</div>
       </div>
       <div class="feature-box">
         <strong class="feature-title">😌 Smooth, Not Vinegary</strong>
-        Bright, refreshing, clean fizz — easy to drink all day.
+        <div class="feature-subtext">Bright, refreshing, clean fizz — easy to drink all day.</div>
       </div>
       <div class="feature-box">
         <strong class="feature-title">🌱 Gut-Friendly by Nature</strong>
-        Packed with live probiotics from natural fermentation.
+        <div class="feature-subtext">Packed with live probiotics from natural fermentation.</div>
       </div>
       <div class="feature-box">
         <strong class="feature-title">🍃 Clean & Organic</strong>
-        No added sugar. 100% organic ingredients. Nothing fake.
+        <div class="feature-subtext">No added sugar. 100% organic ingredients. Nothing fake.</div>
       </div>
     </div>
 
