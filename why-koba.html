@@ -9,8 +9,7 @@
   <style>
     :root {
       --bg: #FFEEDB;
-      --text: #784001;        /* Solid color for headings, logo, etc. */
-      --text-opacity: #784001cc; /* 80% opacity for specific lines */
+      --text: #784001;
       --accent: #8B4513;
       --box-bg: #FFEEDB;
       --border: #E0C9B0;
@@ -62,9 +61,6 @@
       margin: 0 auto;
       padding: 2rem 6% 4rem;
     }
-    h1, h2, h3 {
-      color: var(--text); /* Headings stay solid */
-    }
     h1 {
       font-size: clamp(3.8rem, 9vw, 5.8rem);
       font-weight: 700;
@@ -73,6 +69,7 @@
       letter-spacing: -0.03em;
       text-transform: uppercase;
       line-height: 1.05;
+      color: var(--text);
     }
     h2 {
       font-size: clamp(2.6rem, 6vw, 3.8rem);
@@ -80,19 +77,22 @@
       margin: 4rem 0 1.8rem;
       letter-spacing: -0.015em;
       line-height: 1.15;
+      color: var(--text);
     }
     h3 {
       font-size: 2.1rem;
       font-weight: 700;
       margin: 3rem 0 1.2rem;
+      color: var(--text);
     }
-    /* Only the specific lines get 80% opacity */
-    .intro-bold,
-    .feature-subtext,
-    .promise-bold,
-    .nutrition-table td,
-    .nutrition-table th {
-      color: var(--text-opacity) !important;
+    /* Only the specified titles get bigger size + solid #784001 */
+    .feature-title {
+      font-size: 1.85rem !important; /* 2 steps bigger */
+      line-height: 1.2;
+      font-weight: 700 !important;
+      margin-bottom: 0.8rem;
+      color: #784001 !important;
+      display: block;
     }
     .intro-bold,
     .feature-subtext,
@@ -101,32 +101,27 @@
       line-height: 1.68;
       font-weight: 700;
       margin-bottom: 1.6rem;
+      color: var(--text);
     }
     strong {
       font-weight: 700;
-      color: var(--text-opacity) !important; /* Bold parts inside those lines also get opacity */
+      color: var(--text);
     }
     .feature-list {
       display: grid;
-      gap: 1.8rem;
+      gap: 2.2rem;
       margin: 3rem 0;
     }
     .feature-box {
       background-color: var(--box-bg);
       border: 1px solid var(--border);
       border-radius: 20px;
-      padding: 2.2rem 2.5rem;
+      padding: 2.5rem 3rem;
       font-size: 1.25rem;
       line-height: 1.55;
       box-shadow: 0 6px 16px rgba(92, 47, 0, 0.05);
       transition: all 0.25s ease;
       color: var(--text);
-    }
-    .feature-box strong {
-      display: block;
-      font-size: 1.45rem;
-      margin-bottom: 0.7rem;
-      font-weight: 700;
     }
     .nutrition-table {
       width: 100%;
@@ -141,6 +136,7 @@
       padding: 16px 20px;
       text-align: left;
       border-bottom: 1px solid var(--border);
+      color: var(--text);
     }
     .nutrition-table th {
       background-color: rgba(255, 238, 219, 0.6);
@@ -154,6 +150,7 @@
       .header { height: 72px; padding: 0 7%; }
       body { padding-top: 80px; }
       main.why-koba { padding: 1.5rem 7% 4rem; }
+      .feature-title { font-size: 1.65rem !important; }
       .intro-bold, .feature-subtext, .promise-bold { font-size: 1.45rem; }
     }
     @media (max-width: 600px) {
@@ -161,6 +158,7 @@
       .header { height: 68px; padding: 0 8%; }
       body { padding-top: 76px; font-size: 1.05rem; }
       main.why-koba { padding: 1rem 8% 4rem; }
+      .feature-title { font-size: 1.5rem !important; }
       .intro-bold, .feature-subtext, .promise-bold { font-size: 1.3rem; }
     }
   </style>
@@ -186,20 +184,20 @@
     <h2>What makes KOBA… KOBA</h2>
     <div class="feature-list">
       <div class="feature-box">
-        <strong>🔥 Bold Flavours, No Compromises</strong>
-        <div class="feature-subtext">Gooseberry sparkle. Pineapple sweetness. Turmeric with attitude.</div>
+        <strong class="feature-title">Bold Flavours, No Compromises</strong>
+        Gooseberry sparkle. Pineapple sweetness. Turmeric with attitude.
       </div>
       <div class="feature-box">
-        <strong>😌 Smooth, Not Vinegary</strong>
-        <div class="feature-subtext">Bright, refreshing, clean fizz — easy to drink all day.</div>
+        <strong class="feature-title">Smooth, Not Vinegary</strong>
+        Bright, refreshing, clean fizz — easy to drink all day.
       </div>
       <div class="feature-box">
-        <strong>🌱 Gut-Friendly by Nature</strong>
-        <div class="feature-subtext">Packed with live probiotics from natural fermentation.</div>
+        <strong class="feature-title">Gut-Friendly by Nature</strong>
+        Packed with live probiotics from natural fermentation.
       </div>
       <div class="feature-box">
-        <strong>🍃 Clean & Organic</strong>
-        <div class="feature-subtext">No added sugar. 100% organic ingredients. Nothing fake.</div>
+        <strong class="feature-title">Clean & Organic</strong>
+        No added sugar. 100% organic ingredients. Nothing fake.
       </div>
     </div>
 
