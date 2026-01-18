@@ -10,11 +10,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Switzer:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+    /* =====================
+       BASE STYLES
+       ===================== */
     body {
       font-family: 'Switzer', sans-serif;
       line-height: 1.6;
       margin: 0;
-      padding-top: 90px; /* space for sticky header */
+      padding-top: 90px;
       background-color: #FFEEDB;
       color: #794000;
       font-weight: 700;
@@ -24,7 +27,9 @@
       font-weight: 700 !important;
     }
 
-    /* Sticky Header */
+    /* =====================
+       STICKY HEADER
+       ===================== */
     .header {
       position: fixed;
       top: 0;
@@ -44,6 +49,9 @@
       display: block;
     }
 
+    /* =====================
+       TYPOGRAPHY
+       ===================== */
     h1 {
       text-align: center;
       margin-bottom: 30px;
@@ -63,6 +71,9 @@
       font-size: 16px;
     }
 
+    /* =====================
+       FEATURE BOXES
+       ===================== */
     .feature-box {
       border-radius: 10px;
       padding: 20px;
@@ -72,6 +83,9 @@
       font-size: 16px;
     }
 
+    /* =====================
+       TABLE
+       ===================== */
     table {
       border-collapse: collapse;
       width: 100%;
@@ -94,7 +108,9 @@
       color: #794000;
     }
 
-    /* Mobile */
+    /* =====================
+       MOBILE
+       ===================== */
     @media (max-width: 600px) {
       body {
         padding-top: 80px;
@@ -117,84 +133,94 @@
 
 <body>
 
-  <!-- Sticky Header -->
-  <div class="header">
-    <a href="index.html" class="logo-link">
-      <img src="koba-logo.png" alt="Koba Organics">
-    </a>
+  <!-- WHY KOBA WRAPPER (IMPORTANT) -->
+  <div class="why-koba">
+
+    <!-- Sticky Header -->
+    <div class="header">
+      <a href="index.html" class="logo-link">
+        <img src="koba-logo.png" alt="Koba Organics">
+      </a>
+    </div>
+
+    <h1>WHY KOBA</h1>
+
+    <h2>Fizz that hits different. Sip bold. Feel unstoppable.</h2>
+
+    <p>For new, bold flavours you can always depend on us. We do different.</p>
+
+    <p>
+      KOBA Organics is kombucha that doesn’t play it safe. We craft naturally fermented,
+      probiotic-rich fizz with flavour that actually shows up — not the face-scrunching
+      vinegar punch you get from some other kombuchas.
+    </p>
+
+    <h2>What makes KOBA… KOBA</h2>
+
+    <div class="feature-box">
+      🔥 <strong>Bold Flavours, No Compromises:</strong>
+      Gooseberry sparkle. Pineapple sweetness. Turmeric with attitude.
+    </div>
+
+    <div class="feature-box">
+      😌 <strong>Smooth, Not Vinegary:</strong>
+      Bright, refreshing, clean fizz.
+    </div>
+
+    <div class="feature-box">
+      🌱 <strong>Gut-Friendly by Nature:</strong>
+      Packed with live probiotics.
+    </div>
+
+    <div class="feature-box">
+      🍃 <strong>Clean & Organic:</strong>
+      No added sugar. 100% organic ingredients.
+    </div>
+
+    <h3>💬 The KOBA Promise</h3>
+    <p>We don’t do bland. We don’t do fake. Just bold, balanced fizz.</p>
+
+    <h3>NUTRITION INFORMATION</h3>
+
+    <table>
+      <tr>
+        <th></th>
+        <th>PER 100ML</th>
+        <th>PER SERVE</th>
+      </tr>
+      <tr>
+        <td>ENERGY</td>
+        <td>50 KJ</td>
+        <td>175 KJ</td>
+      </tr>
+      <tr>
+        <td>PROTEIN</td>
+        <td>&lt;1G</td>
+        <td>&lt;0.35G</td>
+      </tr>
+      <tr>
+        <td>FAT, TOTAL - SATURATED</td>
+        <td>&lt;1G</td>
+        <td>&lt;0.35G</td>
+      </tr>
+      <tr>
+        <td>CARBOHYDRATE - SUGARS</td>
+        <td>2.9G</td>
+        <td>10G</td>
+      </tr>
+      <tr>
+        <td>DIETARY FIBRE</td>
+        <td>&lt;1G</td>
+        <td>&lt;0.35G</td>
+      </tr>
+      <tr>
+        <td>SODIUM</td>
+        <td>2MG</td>
+        <td>7MG</td>
+      </tr>
+    </table>
+
   </div>
-
-  <h1>WHY KOBA</h1>
-
-  <h2>Fizz that hits different. Sip bold. Feel unstoppable.</h2>
-
-  <p>For new, bold flavours you can always depend on us. We do different.</p>
-
-  <p>
-    KOBA Organics is kombucha that doesn’t play it safe. We craft naturally fermented, probiotic-rich fizz with
-    flavour that actually shows up — not the face-scrunching vinegar punch you get from some other kombuchas.
-  </p>
-
-  <h2>What makes KOBA… KOBA</h2>
-
-  <div class="feature-box">
-    🔥 <strong>Bold Flavours, No Compromises:</strong> Gooseberry sparkle. Pineapple sweetness. Turmeric with attitude.
-  </div>
-
-  <div class="feature-box">
-    😌 <strong>Smooth, Not Vinegary:</strong> Bright, refreshing, clean fizz.
-  </div>
-
-  <div class="feature-box">
-    🌱 <strong>Gut-Friendly by Nature:</strong> Packed with live probiotics.
-  </div>
-
-  <div class="feature-box">
-    🍃 <strong>Clean & Organic:</strong> No added sugar. 100% organic ingredients.
-  </div>
-
-  <h3>💬 The KOBA Promise</h3>
-  <p>We don’t do bland. We don’t do fake. Just bold, balanced fizz.</p>
-
-  <h3>NUTRITION INFORMATION</h3>
-
-  <table>
-    <tr>
-      <th></th>
-      <th>PER 100ML</th>
-      <th>PER SERVE</th>
-    </tr>
-    <tr>
-      <td>ENERGY</td>
-      <td>50 KJ</td>
-      <td>175 KJ</td>
-    </tr>
-    <tr>
-      <td>PROTEIN</td>
-      <td>&lt;1G</td>
-      <td>&lt;0.35G</td>
-    </tr>
-    <tr>
-      <td>FAT, TOTAL - SATURATED</td>
-      <td>&lt;1G</td>
-      <td>&lt;0.35G</td>
-    </tr>
-    <tr>
-      <td>CARBOHYDRATE - SUGARS</td>
-      <td>2.9G</td>
-      <td>10G</td>
-    </tr>
-    <tr>
-      <td>DIETARY FIBRE</td>
-      <td>&lt;1G</td>
-      <td>&lt;0.35G</td>
-    </tr>
-    <tr>
-      <td>SODIUM</td>
-      <td>2MG</td>
-      <td>7MG</td>
-    </tr>
-  </table>
 
 </body>
 </html>
