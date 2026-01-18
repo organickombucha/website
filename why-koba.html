@@ -10,12 +10,12 @@
  
   <style>
     :root {
-      --bg: #FFEEDB;         /* Exact homepage background – light peach/cream */
+      --bg: #FFEEDB;         /* Exact homepage background color */
       --text: #6B3E00;
       --accent: #8B4513;
       --box-bg: #FFF5E9;
       --border: #E0C9B0;
-      --logo-height: 52px;   /* Standard size to match most homepage logos */
+      --logo-height: 50px;   /* Adjusted to better match typical homepage logo size */
     }
     * {
       box-sizing: border-box;
@@ -24,7 +24,7 @@
       font-family: 'Switzer', system-ui, -apple-system, sans-serif;
       line-height: 1.68;
       margin: 0;
-      padding-top: 100px;    /* Reduced slightly for tighter header feel */
+      padding-top: 92px;     /* Fine-tuned for header height match */
       background-color: var(--bg);
       color: var(--text);
       font-weight: 700;
@@ -35,23 +35,26 @@
       top: 0;
       left: 0;
       width: 100%;
-      background-color: var(--bg);  /* Matches homepage header bg */
-      padding: 1.2rem 6%;           /* Slightly less padding for compact look */
+      background-color: var(--bg);  /* Matches homepage exactly */
+      padding: 1rem 6%;             /* Reduced vertical padding for tighter, homepage-like feel */
       z-index: 1000;
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      border-bottom: 1px solid rgba(107, 62, 0, 0.1);
+      border-bottom: 1px solid rgba(107, 62, 0, 0.08); /* Subtle, matching border */
       backdrop-filter: blur(10px);
+      height: 80px;                 /* Explicit height for consistent feel */
     }
     .logo-link {
       display: flex;
       align-items: center;
+      height: 100%;
     }
     .logo-link img {
       height: var(--logo-height);
       width: auto;
       display: block;
+      max-height: 100%;             /* Prevents overflow */
     }
     main.why-koba {
       max-width: 1100px;
@@ -141,23 +144,24 @@
     }
     @media (max-width: 900px) {
       main.why-koba { padding: 0 7%; }
-      .header { padding: 1.1rem 7%; }
-      :root { --logo-height: 46px; }  /* Slightly smaller on tablet */
+      .header { padding: 0.9rem 7%; height: 70px; }
+      :root { --logo-height: 44px; }
+      body { padding-top: 80px; }
     }
     @media (max-width: 600px) {
-      body { padding-top: 90px; font-size: 1.05rem; }
+      body { padding-top: 78px; font-size: 1.05rem; }
       h1 { font-size: 3.4rem; }
       h2 { font-size: 2.6rem; }
       h3 { font-size: 1.9rem; }
       .feature-box { padding: 1.8rem; font-size: 1.15rem; }
       main.why-koba { padding: 0 8%; }
-      :root { --logo-height: 44px; }  /* Mobile size */
+      :root { --logo-height: 42px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header – same background color as homepage, adjusted size -->
+  <!-- Header – matched size, background, and spacing -->
   <div class="header">
     <a href="/" class="logo-link">
       <img src="images/webclip.png" alt="Koba Organics Logo">
@@ -213,3 +217,4 @@
     </table>
   </main>
 </body>
+</html>
