@@ -51,10 +51,14 @@
       line-height: 0;          /* Helps with precise vertical centering */
     }
     .logo-link img {
-      height: var(--logo-height);
-      width: auto;
-      display: block;
-      vertical-align: middle;
+     height: var(--logo-height);
+  width: auto;
+  display: block;
+  vertical-align: middle;
+  background-color: transparent !important;   /* Force no background */
+  mix-blend-mode: multiply;                   /* Makes white disappear on colored bg (works great for light logos) */
+  /* OR alternative if multiply is too dark: */
+  /* filter: drop-shadow(0 0 0 #FFEEDB) brightness(1.02); */
     }
     main.why-koba {
       max-width: 1100px;
