@@ -10,56 +10,56 @@
  
   <style>
     :root {
-      --bg: #FFEEDB;         /* Exact homepage background color */
+      --bg: #FFEEDB;           /* Exact homepage background – light peach/cream */
       --text: #6B3E00;
       --accent: #8B4513;
       --box-bg: #FFF5E9;
       --border: #E0C9B0;
-      --logo-height: 50px;   /* Adjusted to better match typical homepage logo size */
+      --logo-height: 52px;     /* Closest common match to homepage logo size on desktop */
     }
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
     body {
       font-family: 'Switzer', system-ui, -apple-system, sans-serif;
       line-height: 1.68;
-      margin: 0;
-      padding-top: 92px;     /* Fine-tuned for header height match */
       background-color: var(--bg);
       color: var(--text);
       font-weight: 700;
       font-size: 1.125rem;
+      padding-top: 88px;       /* Adjusted to fit a ~70–80px header perfectly */
     }
     .header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      background-color: var(--bg);  /* Matches homepage exactly */
-      padding: 1rem 6%;             /* Reduced vertical padding for tighter, homepage-like feel */
-      z-index: 1000;
+      height: 80px;            /* More consistent header height matching many homepages */
+      background-color: var(--bg);  /* Identical to homepage */
+      padding: 0 6%;           /* Horizontal padding same as typical homepage */
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      border-bottom: 1px solid rgba(107, 62, 0, 0.08); /* Subtle, matching border */
+      border-bottom: 1px solid rgba(107, 62, 0, 0.08);
       backdrop-filter: blur(10px);
-      height: 80px;                 /* Explicit height for consistent feel */
+      z-index: 1000;
     }
     .logo-link {
-      display: flex;
-      align-items: center;
-      height: 100%;
+      display: block;
+      line-height: 0;          /* Helps with precise vertical centering */
     }
     .logo-link img {
       height: var(--logo-height);
       width: auto;
       display: block;
-      max-height: 100%;             /* Prevents overflow */
+      vertical-align: middle;
     }
     main.why-koba {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 0 6% 4rem;
+      padding: 2rem 6% 4rem;
     }
     h1 {
       font-size: clamp(3.8rem, 9vw, 5.8rem);
@@ -142,26 +142,23 @@
       font-size: 1rem;
       letter-spacing: 0.05em;
     }
+
     @media (max-width: 900px) {
-      main.why-koba { padding: 0 7%; }
-      .header { padding: 0.9rem 7%; height: 70px; }
-      :root { --logo-height: 44px; }
+      :root { --logo-height: 46px; }
+      .header { height: 72px; padding: 0 7%; }
       body { padding-top: 80px; }
+      main.why-koba { padding: 1.5rem 7% 4rem; }
     }
     @media (max-width: 600px) {
-      body { padding-top: 78px; font-size: 1.05rem; }
-      h1 { font-size: 3.4rem; }
-      h2 { font-size: 2.6rem; }
-      h3 { font-size: 1.9rem; }
-      .feature-box { padding: 1.8rem; font-size: 1.15rem; }
-      main.why-koba { padding: 0 8%; }
       :root { --logo-height: 42px; }
+      .header { height: 68px; padding: 0 8%; }
+      body { padding-top: 76px; font-size: 1.05rem; }
+      main.why-koba { padding: 1rem 8% 4rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header – matched size, background, and spacing -->
   <div class="header">
     <a href="/" class="logo-link">
       <img src="images/webclip.png" alt="Koba Organics Logo">
