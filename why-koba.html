@@ -10,12 +10,12 @@
  
   <style>
     :root {
-      --bg: #FFEEDB;
+      --bg: #FFEEDB;         /* Exact homepage background – light peach/cream */
       --text: #6B3E00;
       --accent: #8B4513;
       --box-bg: #FFF5E9;
       --border: #E0C9B0;
-      --logo-height: 58px;
+      --logo-height: 52px;   /* Standard size to match most homepage logos */
     }
     * {
       box-sizing: border-box;
@@ -24,7 +24,7 @@
       font-family: 'Switzer', system-ui, -apple-system, sans-serif;
       line-height: 1.68;
       margin: 0;
-      padding-top: 110px;
+      padding-top: 100px;    /* Reduced slightly for tighter header feel */
       background-color: var(--bg);
       color: var(--text);
       font-weight: 700;
@@ -35,13 +35,13 @@
       top: 0;
       left: 0;
       width: 100%;
-      background-color: var(--bg);
-      padding: 1.4rem 6%;
+      background-color: var(--bg);  /* Matches homepage header bg */
+      padding: 1.2rem 6%;           /* Slightly less padding for compact look */
       z-index: 1000;
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      border-bottom: 1px solid rgba(107, 62, 0, 0.12);
+      border-bottom: 1px solid rgba(107, 62, 0, 0.1);
       backdrop-filter: blur(10px);
     }
     .logo-link {
@@ -141,22 +141,23 @@
     }
     @media (max-width: 900px) {
       main.why-koba { padding: 0 7%; }
-      .header { padding: 1.2rem 7%; }
-      :root { --logo-height: 50px; }
+      .header { padding: 1.1rem 7%; }
+      :root { --logo-height: 46px; }  /* Slightly smaller on tablet */
     }
     @media (max-width: 600px) {
-      body { padding-top: 95px; font-size: 1.05rem; }
+      body { padding-top: 90px; font-size: 1.05rem; }
       h1 { font-size: 3.4rem; }
       h2 { font-size: 2.6rem; }
       h3 { font-size: 1.9rem; }
       .feature-box { padding: 1.8rem; font-size: 1.15rem; }
       main.why-koba { padding: 0 8%; }
+      :root { --logo-height: 44px; }  /* Mobile size */
     }
   </style>
 </head>
 <body>
 
-  <!-- Header with the correct logo path -->
+  <!-- Header – same background color as homepage, adjusted size -->
   <div class="header">
     <a href="/" class="logo-link">
       <img src="images/webclip.png" alt="Koba Organics Logo">
@@ -212,5 +213,3 @@
     </table>
   </main>
 </body>
-</html>
-
