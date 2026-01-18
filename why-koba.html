@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WHY KOBA | Koba Organics</title>
   
-  <!-- Switzer – modern, clean, widely used in AU wellness brands -->
+  <!-- Switzer font -->
   <link href="https://fonts.googleapis.com/css2?family=Switzer:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
     :root {
-      --bg: #FFF8F0;           /* soft warm off-white */
-      --text: #5C2F00;         /* rich warm brown */
+      --bg: #FFEEDB;           /* Exact original home page background */
+      --text: #5C2F00;         /* Rich warm brown */
       --accent: #8B4513;
-      --box-bg: #FFFBF5;       /* ultra light cream */
-      --border: #E0C9B0;       /* softer border */
+      --box-bg: #FFF5E9;       /* Slightly warmer/lighter cream for boxes on #FFEEDB */
+      --border: #E0C9B0;
     }
 
     * {
@@ -28,13 +28,11 @@
       padding-top: 100px;
       background-color: var(--bg);
       color: var(--text);
-      font-weight: 400;
-      font-size: 1.125rem;     /* base larger for better readability */
+      font-weight: 500;        /* Bolder base weight for all text */
+      font-size: 1.125rem;
     }
 
-    /* =====================
-       STICKY HEADER
-       ===================== */
+    /* Header */
     .header {
       position: fixed;
       top: 0;
@@ -45,27 +43,23 @@
       z-index: 1000;
       display: flex;
       align-items: center;
-      border-bottom: 1px solid rgba(92, 47, 0, 0.07);
+      border-bottom: 1px solid rgba(92, 47, 0, 0.1);
       backdrop-filter: blur(10px);
     }
 
     .logo-link img {
-      height: 52px;            /* slightly larger logo for premium feel */
+      height: 52px;
       width: auto;
     }
 
-    /* =====================
-       MAIN CONTENT WRAPPER – key fix for spacing
-       ===================== */
+    /* Main content – wide & balanced spacing */
     main.why-koba {
-      max-width: 1100px;       /* wider = more balanced left/right space */
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 0 6% 4rem;      /* generous side padding → matches many premium sites */
+      padding: 0 6% 4rem;
     }
 
-    /* =====================
-       TYPOGRAPHY – noticeably larger & bolder
-       ===================== */
+    /* Typography – bolder feel */
     h1 {
       font-size: clamp(3.8rem, 9vw, 5.8rem);
       font-weight: 700;
@@ -78,7 +72,7 @@
 
     h2 {
       font-size: clamp(2.6rem, 6vw, 3.8rem);
-      font-weight: 600;
+      font-weight: 700;        /* Bumped to 700 for stronger headings */
       margin: 4rem 0 1.8rem;
       letter-spacing: -0.015em;
       line-height: 1.15;
@@ -86,14 +80,15 @@
 
     h3 {
       font-size: 2.1rem;
-      font-weight: 600;
+      font-weight: 700;
       margin: 3rem 0 1.2rem;
     }
 
     p {
-      font-size: 1.2rem;       /* larger body text – feels more like premium homepage */
+      font-size: 1.2rem;
       margin-bottom: 1.6rem;
       max-width: 760px;
+      font-weight: 500;        /* Ensures paragraphs feel bolder */
     }
 
     strong {
@@ -101,9 +96,7 @@
       color: var(--text);
     }
 
-    /* =====================
-       FEATURE BOXES
-       ===================== */
+    /* Feature boxes */
     .feature-list {
       display: grid;
       gap: 1.8rem;
@@ -119,6 +112,7 @@
       line-height: 1.55;
       box-shadow: 0 6px 16px rgba(92, 47, 0, 0.05);
       transition: all 0.25s ease;
+      font-weight: 600;        /* Bolder inside boxes */
     }
 
     .feature-box:hover {
@@ -130,17 +124,17 @@
       display: block;
       font-size: 1.45rem;
       margin-bottom: 0.7rem;
+      font-weight: 700;
     }
 
-    /* =====================
-       NUTRITION TABLE
-       ===================== */
+    /* Nutrition table */
     .nutrition-table {
       width: 100%;
       max-width: 760px;
       margin: 3rem auto;
       border-collapse: collapse;
       font-size: 1.15rem;
+      font-weight: 500;
     }
 
     .nutrition-table th,
@@ -151,16 +145,14 @@
     }
 
     .nutrition-table th {
-      background-color: rgba(255, 251, 245, 0.7);
-      font-weight: 600;
+      background-color: rgba(255, 238, 219, 0.6); /* subtle tint matching bg */
+      font-weight: 700;
       text-transform: uppercase;
       font-size: 1rem;
       letter-spacing: 0.05em;
     }
 
-    /* =====================
-       MOBILE ADJUSTMENTS
-       ===================== */
+    /* Mobile */
     @media (max-width: 900px) {
       main.why-koba { padding: 0 7%; }
       .header { padding: 1.3rem 7%; }
@@ -234,7 +226,6 @@
         <th>PER 100ML</th>
         <th>PER SERVE (350ML)</th>
       </tr>
-      <!-- ... rest of table rows unchanged ... -->
       <tr><td>ENERGY</td><td>50 kJ</td><td>175 kJ</td></tr>
       <tr><td>PROTEIN</td><td>&lt;1 g</td><td>&lt;0.35 g</td></tr>
       <tr><td>FAT, TOTAL<br>— SATURATED</td><td>&lt;1 g<br>— &lt;1 g</td><td>&lt;0.35 g<br>— &lt;0.35 g</td></tr>
