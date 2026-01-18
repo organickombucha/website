@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WHY KOBA | Koba Organics</title>
 
-  <!-- Homepage CSS dependencies -->
+  <!-- Homepage CSS (needed for navbar only) -->
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/components.css" rel="stylesheet" type="text/css">
   <link href="css/kobaorganics.css" rel="stylesheet" type="text/css">
 
-  <!-- Switzer font (Why Koba page styling) -->
+  <!-- Switzer font -->
   <link href="https://fonts.googleapis.com/css2?family=Switzer:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -22,11 +22,13 @@
       --box-bg: #FFEEDB;
       --border: #E0C9B0;
     }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     body {
       font-family: 'Switzer', system-ui, -apple-system, sans-serif;
       line-height: 1.68;
@@ -34,13 +36,14 @@
       color: var(--text);
       font-weight: 500;
       font-size: 1.125rem;
-      padding-top: 120px; /* space for homepage navbar */
     }
+
     main.why-koba {
       max-width: 1100px;
       margin: 0 auto;
       padding: 2rem 6% 4rem;
     }
+
     h1 {
       font-size: clamp(3.8rem, 9vw, 5.8rem);
       font-weight: 700;
@@ -48,14 +51,17 @@
       margin-bottom: 1.5rem;
       text-transform: uppercase;
     }
+
     h2 {
       font-size: clamp(2.6rem, 6vw, 3.8rem);
       margin: 8rem 0 1.8rem;
     }
+
     h3 {
       font-size: 2.1rem;
       margin: 6rem 0 1.2rem;
     }
+
     .intro-bold,
     .feature-subtext,
     .promise-bold {
@@ -64,17 +70,20 @@
       margin-bottom: 1.6rem;
       color: var(--text-opacity);
     }
+
     .feature-list {
       display: grid;
       gap: 2.2rem;
       margin: 3rem 0;
     }
+
     .feature-box {
       border: 1px solid var(--border);
       border-radius: 20px;
       padding: 2.5rem 3rem;
       font-size: 1.25rem;
     }
+
     .nutrition-table {
       width: 100%;
       max-width: 760px;
@@ -82,6 +91,7 @@
       border-collapse: collapse;
       font-weight: 700;
     }
+
     .nutrition-table th,
     .nutrition-table td {
       padding: 16px 20px;
@@ -92,7 +102,7 @@
 
 <body>
 
-<!-- ✅ HOMEPAGE NAVBAR (UNCHANGED) -->
+<!-- ✅ HOMEPAGE NAVBAR — IDENTICAL, NO MODS -->
 <div class="navbar">
   <div class="padding-vertical padding-medium">
     <div class="padding-horizontal padding-huge">
@@ -144,7 +154,7 @@
   </div>
 </div>
 
-<!-- ✅ WHY KOBA CONTENT (UNCHANGED) -->
+<!-- ✅ ORIGINAL WHY KOBA CONTENT — UNTOUCHED -->
 <main class="why-koba">
   <h1>WHY KOBA</h1>
   <h2>Fizz that hits different.<br>Sip bold. Feel unstoppable.</h2>
@@ -162,7 +172,8 @@
 
   <h3>💬 The KOBA Promise</h3>
   <p class="promise-bold">
-    We don’t do fake. We don’t do kombucha that tastes like regret.
+    We don’t do fake.<br>
+    We don’t do kombucha that tastes like regret.<br>
     We do bold, balanced, feel-good fizz — every single time.
   </p>
 
