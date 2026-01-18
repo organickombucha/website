@@ -40,25 +40,22 @@
       padding: 0 6%;
       display: flex;
       align-items: center;
-      justify-content: space-between; /* Changed to space-between so logo is center + button on left */
+      justify-content: space-between; /* Button right, logo center */
       border-bottom: 1px solid rgba(107, 62, 0, 0.08);
       backdrop-filter: blur(10px);
       z-index: 1000;
     }
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 2rem; /* Space between button and centered logo */
-    }
     .logo-link {
       display: block;
       line-height: 0;
+      flex: 1; /* Helps center the logo perfectly */
+      text-align: center;
     }
     .logo-link img {
       height: var(--logo-height);
       width: auto;
       display: block;
-      vertical-align: middle;
+      margin: 0 auto; /* Centers logo horizontally */
       background-color: transparent !important;
       mix-blend-mode: multiply;
     }
@@ -204,38 +201,35 @@
       main.why-koba { padding: 1rem 8% 4rem; }
       .feature-title { font-size: 2.2rem; }
       .intro-bold, .feature-subtext, .promise-bold { font-size: 1.3rem; }
-      .header-left { justify-content: center; }
     }
   </style>
 </head>
 <body>
   <div class="header">
-    <div class="header-left">
-      <!-- BUY button from homepage - exact copy -->
-      <a href="#" class="button">
-        <div class="button_text">
-          <p class="button_text_content is-1">BUY</p>
-          <p class="button_text_content is-2">BUY</p>
+    <!-- BUY button on right-hand side (exact homepage copy) -->
+    <a href="#" class="button">
+      <div class="button_text">
+        <p class="button_text_content is-1">BUY</p>
+        <p class="button_text_content is-2">BUY</p>
+      </div>
+      <div class="button_arrow">
+        <div class="button_arrow_icon is-1 w-embed">
+          <svg width="100%" height="100%" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.351562 0.5H10.3516M10.3516 0.5V10.5M10.3516 0.5L0.351562 10.5" stroke="white"></path>
+          </svg>
         </div>
-        <div class="button_arrow">
-          <div class="button_arrow_icon is-1 w-embed">
-            <svg width="100%" height="100%" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.351562 0.5H10.3516M10.3516 0.5V10.5M10.3516 0.5L0.351562 10.5" stroke="white"></path>
-            </svg>
-          </div>
-          <div class="button_arrow_icon is-2 w-embed">
-            <svg width="100%" height="100%" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.351562 0.5H10.3516M10.3516 0.5V10.5M10.3516 0.5L0.351562 10.5" stroke="white"></path>
-            </svg>
-          </div>
+        <div class="button_arrow_icon is-2 w-embed">
+          <svg width="100%" height="100%" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.351562 0.5H10.3516M10.3516 0.5V10.5M10.3516 0.5L0.351562 10.5" stroke="white"></path>
+          </svg>
         </div>
-      </a>
+      </div>
+    </a>
 
-      <!-- Centered logo -->
-      <a href="/" class="logo-link">
-        <img src="images/webclip.png" alt="Koba Organics Logo">
-      </a>
-    </div>
+    <!-- Centered logo -->
+    <a href="/" class="logo-link">
+      <img src="images/webclip.png" alt="Koba Organics Logo">
+    </a>
   </div>
 
   <main class="why-koba">
