@@ -4,23 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WHY KOBA | Koba Organics</title>
-  
+ 
   <!-- Switzer font -->
   <link href="https://fonts.googleapis.com/css2?family=Switzer:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+ 
   <style>
     :root {
-      --bg: #FFEEDB;           /* Exact original home page background */
-      --text: #5C2F00;         /* Rich warm brown */
+      --bg: #FFEEDB;
+      --text: #5C2F00;
       --accent: #8B4513;
-      --box-bg: #FFF5E9;       /* Slightly warmer/lighter cream for boxes on #FFEEDB */
+      --box-bg: #FFF5E9;
       --border: #E0C9B0;
     }
-
     * {
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Switzer', system-ui, -apple-system, sans-serif;
       line-height: 1.68;
@@ -28,10 +26,9 @@
       padding-top: 100px;
       background-color: var(--bg);
       color: var(--text);
-      font-weight: 500;        /* Bolder base weight for all text */
+      font-weight: 700; /* Changed to bold base weight */
       font-size: 1.125rem;
     }
-
     /* Header */
     .header {
       position: fixed;
@@ -46,20 +43,15 @@
       border-bottom: 1px solid rgba(92, 47, 0, 0.1);
       backdrop-filter: blur(10px);
     }
-
     .logo-link img {
       height: 52px;
       width: auto;
     }
-
-    /* Main content – wide & balanced spacing */
     main.why-koba {
       max-width: 1100px;
       margin: 0 auto;
       padding: 0 6% 4rem;
     }
-
-    /* Typography – bolder feel */
     h1 {
       font-size: clamp(3.8rem, 9vw, 5.8rem);
       font-weight: 700;
@@ -69,40 +61,34 @@
       text-transform: uppercase;
       line-height: 1.05;
     }
-
     h2 {
       font-size: clamp(2.6rem, 6vw, 3.8rem);
-      font-weight: 700;        /* Bumped to 700 for stronger headings */
+      font-weight: 700;
       margin: 4rem 0 1.8rem;
       letter-spacing: -0.015em;
       line-height: 1.15;
     }
-
     h3 {
       font-size: 2.1rem;
       font-weight: 700;
       margin: 3rem 0 1.2rem;
     }
-
     p {
       font-size: 1.2rem;
       margin-bottom: 1.6rem;
       max-width: 760px;
-      font-weight: 500;        /* Ensures paragraphs feel bolder */
+      font-weight: 700; /* bold paragraphs */
     }
-
     strong {
       font-weight: 700;
       color: var(--text);
     }
-
     /* Feature boxes */
     .feature-list {
       display: grid;
       gap: 1.8rem;
       margin: 3rem 0;
     }
-
     .feature-box {
       background-color: var(--box-bg);
       border: 1px solid var(--border);
@@ -112,53 +98,47 @@
       line-height: 1.55;
       box-shadow: 0 6px 16px rgba(92, 47, 0, 0.05);
       transition: all 0.25s ease;
-      font-weight: 600;        /* Bolder inside boxes */
+      font-weight: 700;
     }
-
     .feature-box:hover {
       transform: translateY(-6px);
       box-shadow: 0 12px 32px rgba(92, 47, 0, 0.09);
     }
-
     .feature-box strong {
       display: block;
       font-size: 1.45rem;
       margin-bottom: 0.7rem;
       font-weight: 700;
     }
-
-    /* Nutrition table */
+    /* Nutrition table - all bold */
     .nutrition-table {
       width: 100%;
       max-width: 760px;
       margin: 3rem auto;
       border-collapse: collapse;
       font-size: 1.15rem;
-      font-weight: 500;
+      font-weight: 700; /* base bold for table */
     }
-
     .nutrition-table th,
     .nutrition-table td {
       padding: 16px 20px;
       text-align: left;
       border-bottom: 1px solid var(--border);
+      font-weight: 700;
     }
-
     .nutrition-table th {
-      background-color: rgba(255, 238, 219, 0.6); /* subtle tint matching bg */
+      background-color: rgba(255, 238, 219, 0.6);
       font-weight: 700;
       text-transform: uppercase;
       font-size: 1rem;
       letter-spacing: 0.05em;
     }
-
     /* Mobile */
     @media (max-width: 900px) {
       main.why-koba { padding: 0 7%; }
       .header { padding: 1.3rem 7%; }
       .logo-link img { height: 46px; }
     }
-
     @media (max-width: 600px) {
       body { padding-top: 85px; font-size: 1.05rem; }
       h1 { font-size: 3.4rem; }
@@ -170,7 +150,6 @@
   </style>
 </head>
 <body>
-
   <!-- Sticky Header -->
   <div class="header">
     <a href="/" class="logo-link">
@@ -179,37 +158,32 @@
   </div>
 
   <main class="why-koba">
-
     <h1>WHY KOBA</h1>
-
     <h2>Fizz that hits different.<br>Sip bold. Feel unstoppable.</h2>
-
     <p>For new, bold flavours you can always depend on. We do different.</p>
-
     <p>
-      KOBA Organics is kombucha that doesn’t play it safe. We craft naturally fermented, 
-      probiotic-rich fizz with flavour that actually shows up — not the face-scrunching 
+      KOBA Organics is kombucha that doesn’t play it safe. We craft naturally fermented,
+      probiotic-rich fizz with flavour that actually shows up — not the face-scrunching
       vinegar punch you get from some other kombuchas.
     </p>
 
     <h2>What makes KOBA… KOBA</h2>
-
     <div class="feature-list">
       <div class="feature-box">
         <strong>🔥 Bold Flavours, No Compromises</strong>
         Gooseberry sparkle. Pineapple sweetness. Turmeric with attitude.
       </div>
-      
+     
       <div class="feature-box">
         <strong>😌 Smooth, Not Vinegary</strong>
         Bright, refreshing, clean fizz — easy to drink all day.
       </div>
-      
+     
       <div class="feature-box">
         <strong>🌱 Gut-Friendly by Nature</strong>
         Packed with live probiotics from natural fermentation.
       </div>
-      
+     
       <div class="feature-box">
         <strong>🍃 Clean & Organic</strong>
         No added sugar. 100% organic ingredients. Nothing fake.
@@ -219,21 +193,20 @@
     <h3>💬 The KOBA Promise</h3>
     <p>We don’t do bland. We don’t do fake. Just bold, balanced, delicious fizz.</p>
 
-    <h3>NUTRITION INFORMATION</h3>
+    <h3>Nutritional Information</h3>
     <table class="nutrition-table">
       <tr>
         <th></th>
-        <th>PER 100ML</th>
-        <th>PER SERVE (350ML)</th>
+        <th>Per 100ml</th>
+        <th>Per Serve (350ml)</th>
       </tr>
-      <tr><td>ENERGY</td><td>50 kJ</td><td>175 kJ</td></tr>
-      <tr><td>PROTEIN</td><td>&lt;1 g</td><td>&lt;0.35 g</td></tr>
-      <tr><td>FAT, TOTAL<br>— SATURATED</td><td>&lt;1 g<br>— &lt;1 g</td><td>&lt;0.35 g<br>— &lt;0.35 g</td></tr>
-      <tr><td>CARBOHYDRATE<br>— SUGARS</td><td>2.9 g<br>— 2.9 g</td><td>10 g<br>— 10 g</td></tr>
-      <tr><td>DIETARY FIBRE</td><td>&lt;1 g</td><td>&lt;0.35 g</td></tr>
-      <tr><td>SODIUM</td><td>2 mg</td><td>7 mg</td></tr>
+      <tr><td>Energy</td><td>50 kJ</td><td>175 kJ</td></tr>
+      <tr><td>Protein</td><td>&lt;1 g</td><td>&lt;0.35 g</td></tr>
+      <tr><td>Fat, total<br>— saturated</td><td>&lt;1 g<br>— &lt;1 g</td><td>&lt;0.35 g<br>— &lt;0.35 g</td></tr>
+      <tr><td>Carbohydrate<br>— sugars</td><td>2.9 g<br>— 2.9 g</td><td>10 g<br>— 10 g</td></tr>
+      <tr><td>Dietary fibre</td><td>&lt;1 g</td><td>&lt;0.35 g</td></tr>
+      <tr><td>Sodium</td><td>2 mg</td><td>7 mg</td></tr>
     </table>
-
   </main>
 </body>
 </html>
