@@ -40,7 +40,7 @@
       padding: 0 6%;
       display: flex;
       align-items: center;
-      justify-content: space-between; /* ← This makes logo centered and button on right */
+      justify-content: space-between; /* Button right, logo center */
       border-bottom: 1px solid rgba(107, 62, 0, 0.08);
       backdrop-filter: blur(10px);
       z-index: 1000;
@@ -48,29 +48,33 @@
     .logo-link {
       display: block;
       line-height: 0;
+      flex: 1;
+      text-align: center;
     }
     .logo-link img {
       height: var(--logo-height);
       width: auto;
       display: block;
-      vertical-align: middle;
+      margin: 0 auto;
       background-color: transparent !important;
       mix-blend-mode: multiply;
     }
-    /* Exact BUY button from homepage – same design, text, arrow */
+    /* Exact BUY button styling from homepage */
     .button {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.75rem 1.5rem;
+      padding: 0.8rem 1.8rem; /* Matches homepage button size */
       background-color: #246A1E;
       color: white;
       text-decoration: none;
       border-radius: 9999px;
       font-weight: 700;
+      font-size: 1rem;
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
+      white-space: nowrap;
     }
     .button:hover {
       background-color: #1f5718;
@@ -78,6 +82,7 @@
     }
     .button_text {
       position: relative;
+      min-width: 3ch; /* Ensures text doesn't jump */
     }
     .button_text_content {
       position: absolute;
@@ -99,6 +104,7 @@
     .button_arrow {
       width: 20px;
       height: 20px;
+      flex-shrink: 0;
     }
     main.why-koba {
       max-width: 1100px;
@@ -194,7 +200,7 @@
     }
     @media (max-width: 600px) {
       :root { --logo-height: 42px; }
-      .header { height: 100px; padding: 0 8%; flex-direction: column; gap: 1rem; }
+      .header { height: 100px; padding: 1rem 8%; flex-direction: column; gap: 1rem; }
       body { padding-top: 110px; font-size: 1.05rem; }
       main.why-koba { padding: 1rem 8% 4rem; }
       .feature-title { font-size: 2.2rem; }
@@ -209,7 +215,7 @@
       <img src="images/webclip.png" alt="Koba Organics Logo">
     </a>
 
-    <!-- BUY button on right-hand side (exact copy from homepage) -->
+    <!-- BUY button on right-hand side - exact match to homepage -->
     <a href="#" class="button">
       <div class="button_text">
         <p class="button_text_content is-1">BUY</p>
