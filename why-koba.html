@@ -30,63 +30,43 @@
       font-size: 1.125rem;
       padding-top: 88px;
     }
-    /* Homepage-style navbar - exact match */
-    .navbar {
+    .header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
+      height: 80px;
       background-color: var(--bg);
-      z-index: 1000;
-      border-bottom: 1px solid rgba(107, 62, 0, 0.08);
-      backdrop-filter: blur(10px);
-    }
-    .padding-vertical.padding-medium {
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-    }
-    .padding-horizontal.padding-huge {
-      padding-left: 6%;
-      padding-right: 6%;
-    }
-    .container-large {
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-    .navbar_container {
+      padding: 0 6%;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      border-bottom: 1px solid rgba(107, 62, 0, 0.08);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
     }
-    .navbar_logo_wrapper {
+    /* Top-centre "KOBA ORGANICS" now acts as homepage button */
+    .logo-link {
+      display: block;
+      line-height: 0;
       flex: 1;
       text-align: center;
+      transition: all 0.3s ease;
     }
-    .logo_wrapper .logo {
-      font-size: 2.5rem;
-      font-weight: 900;
-      color: var(--text);
-      text-transform: uppercase;
-      letter-spacing: -0.02em;
-      margin: 0;
+    .logo-link:hover {
+      transform: scale(1.05);
+      filter: brightness(1.1);
     }
-    .logo_main {
+    .logo-link img {
+      height: var(--logo-height);
+      width: auto;
       display: block;
-      font-size: 3.5rem;
-      line-height: 0.9;
+      margin: 0 auto;
+      background-color: transparent !important;
+      mix-blend-mode: multiply;
     }
-    .logo_tagline {
-      display: block;
-      font-size: 1.8rem;
-      line-height: 0.95;
-      margin-top: -0.15em;
-    }
-    .navbar_cta {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    .button.button-primary {
+    /* BUY button on right (unchanged) */
+    .button {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
@@ -102,7 +82,7 @@
       overflow: hidden;
       white-space: nowrap;
     }
-    .button.button-primary:hover {
+    .button:hover {
       background-color: #1f5718;
       transform: translateY(-2px);
     }
@@ -231,51 +211,35 @@
       main.why-koba { padding: 1rem 8% 4rem; }
       .feature-title { font-size: 2.2rem; }
       .intro-bold, .feature-subtext, .promise-bold { font-size: 1.3rem; }
-      .navbar_container { flex-direction: column; }
-      .navbar_cta { flex-wrap: wrap; justify-content: center; }
     }
   </style>
 </head>
 <body>
-  <!-- Homepage-style navbar with BUY on right -->
-  <div class="navbar">
-    <div class="padding-vertical padding-medium">
-      <div class="padding-horizontal padding-huge">
-        <div class="container-large">
-          <div class="navbar_container">
-            <div class="navbar_logo_wrapper">
-              <div class="logo_wrapper">
-                <h1 class="logo">
-                  <span class="logo_main">KOBA</span>
-                  <span class="logo_tagline">ORGANICS</span>
-                </h1>
-              </div>
-            </div>
-            <div class="navbar_cta">
-              <!-- BUY button - exact match to homepage -->
-              <a href="#" class="button button-primary w-inline-block">
-                <div class="button_text">
-                  <p class="button_text_content is-1">BUY</p>
-                  <p class="button_text_content is-2">BUY</p>
-                </div>
-                <div class="button_arrow">
-                  <div class="button_arrow_icon is-1 w-embed">
-                    <svg width="100%" height="100%" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.351562 0.5H10.3516M10.3516 0.5V10.5M10.3516 0.5L0.351562 10.5" stroke="white"></path>
-                    </svg>
-                  </div>
-                  <div class="button_arrow_icon is-2 w-embed">
-                    <svg width="100%" height="100%" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0.351562 0.5H10.3516M10.3516 0.5V10.5M10.3516 0.5L0.351562 10.5" stroke="white"></path>
-                    </svg>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
+  <div class="header">
+    <!-- Top-centre "KOBA ORGANICS" image is now the homepage button -->
+    <a href="/" class="logo-link">
+      <img src="images/webclip.png" alt="Koba Organics - Click to go home">
+    </a>
+
+    <!-- BUY button on right (unchanged) -->
+    <a href="#" class="button">
+      <div class="button_text">
+        <p class="button_text_content is-1">BUY</p>
+        <p class="button_text_content is-2">BUY</p>
+      </div>
+      <div class="button_arrow">
+        <div class="button_arrow_icon is-1 w-embed">
+          <svg width="100%" height="100%" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.351562 0.5H10.3516M10.3516 0.5V10.5M10.3516 0.5L0.351562 10.5" stroke="white"></path>
+          </svg>
+        </div>
+        <div class="button_arrow_icon is-2 w-embed">
+          <svg width="100%" height="100%" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.351562 0.5H10.3516M10.3516 0.5V10.5M10.3516 0.5L0.351562 10.5" stroke="white"></path>
+          </svg>
         </div>
       </div>
-    </div>
+    </a>
   </div>
 
   <main class="why-koba">
@@ -322,7 +286,7 @@
       <tr><td>Energy</td><td>50 kJ</td><td>175 kJ</td></tr>
       <tr><td>Protein</td><td>&lt;1 g</td><td>&lt;0.35 g</td></tr>
       <tr><td>Fat, total<br>— saturated</td><td>&lt;1 g<br>— &lt;1 g</td><td>&lt;0.35 g<br>— &lt;0.35 g</td></tr>
-      <tr><td>Carbohydrate<br>— sugars</td><td>2.9 g<br>— 2.9 g</td><td>10 g<br> — 10 g</td></tr>
+      <tr><td>Carbohydrate<br>— sugars</td><td>2.9 g<br>— 2.9 g</td><td>10 g<br>— 10 g</td></tr>
       <tr><td>Dietary fibre</td><td>&lt;1 g</td><td>&lt;0.35 g</td></tr>
       <tr><td>Sodium</td><td>2 mg</td><td>7 mg</td></tr>
     </table>
