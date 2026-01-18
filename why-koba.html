@@ -86,10 +86,16 @@
       margin: 3rem 0 1.2rem;
       color: var(--text);
     }
-    /* Doubled space before Nutritional Information heading */
-    h3.nutrition-heading {
-      margin-top: 6rem !important; /* ← Doubled from ~3rem to 6rem */
+    /* The four headlines are now 2× bigger */
+    .feature-title {
+      font-size: 3.7rem !important; /* ← 2× bigger than previous 1.85rem */
+      line-height: 1.1;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+      color: #784001 !important;
+      display: block;
     }
+    /* Everything else stays exactly the same */
     .intro-bold,
     .feature-subtext,
     .promise-bold {
@@ -98,14 +104,6 @@
       font-weight: 700;
       margin-bottom: 1.6rem;
       color: var(--text-opacity);
-    }
-    .feature-title {
-      font-size: 1.85rem;
-      line-height: 1.2;
-      font-weight: 700;
-      margin-bottom: 0.8rem;
-      color: #784001 !important;
-      display: block;
     }
     .feature-list {
       display: grid;
@@ -150,18 +148,16 @@
       .header { height: 72px; padding: 0 7%; }
       body { padding-top: 80px; }
       main.why-koba { padding: 1.5rem 7% 4rem; }
-      h3.nutrition-heading { margin-top: 5rem !important; }
+      .feature-title { font-size: 3rem !important; }
       .intro-bold, .feature-subtext, .promise-bold { font-size: 1.45rem; }
-      .feature-title { font-size: 1.65rem; }
     }
     @media (max-width: 600px) {
       :root { --logo-height: 42px; }
       .header { height: 68px; padding: 0 8%; }
       body { padding-top: 76px; font-size: 1.05rem; }
       main.why-koba { padding: 1rem 8% 4rem; }
-      h3.nutrition-heading { margin-top: 4rem !important; }
+      .feature-title { font-size: 2.6rem !important; }
       .intro-bold, .feature-subtext, .promise-bold { font-size: 1.3rem; }
-      .feature-title { font-size: 1.5rem; }
     }
   </style>
 </head>
@@ -206,8 +202,7 @@
     <h3>💬 The KOBA Promise</h3>
     <p class="promise-bold">We don’t do bland. We don’t do fake. Just bold, balanced, delicious fizz.</p>
 
-    <!-- Doubled space before Nutritional Information -->
-    <h3 class="nutrition-heading">Nutritional Information</h3>
+    <h3>Nutritional Information</h3>
     <table class="nutrition-table">
       <tr>
         <th></th>
