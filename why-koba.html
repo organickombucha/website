@@ -59,6 +59,8 @@
       background-color: transparent !important;
       mix-blend-mode: multiply;
     }
+
+    /* ── BUY button styles matched to homepage ─────────────────────────────── */
     .button {
       display: inline-flex;
       align-items: center;
@@ -75,14 +77,17 @@
       overflow: hidden;
       white-space: nowrap;
     }
+
     .button:hover {
       background-color: #1f5718;
       transform: translateY(-2px);
     }
+
     .button_text {
       position: relative;
       min-width: 3ch;
     }
+
     .button_text_content {
       position: absolute;
       top: 50%;
@@ -91,20 +96,26 @@
       opacity: 0;
       transition: opacity 0.3s ease;
     }
+
     .button_text_content.is-1 {
       opacity: 1;
     }
+
     .button:hover .button_text_content.is-1 {
       opacity: 0;
     }
+
     .button:hover .button_text_content.is-2 {
       opacity: 1;
     }
+
     .button_arrow {
       width: 20px;
       height: 20px;
       flex-shrink: 0;
     }
+    /* ──────────────────────────────────────────────────────────────────────── */
+
     main.why-koba {
       max-width: 1100px;
       margin: 0 auto;
@@ -212,8 +223,7 @@
     <a href="/" class="logo-link">
       <img src="images/webclip.png" alt="Koba Organics Logo">
     </a>
-
-    <a href="#" class="button">
+    <a href="#" class="button button-primary w-inline-block">
       <div class="button_text">
         <p class="button_text_content is-1">BUY</p>
         <p class="button_text_content is-2">BUY</p>
@@ -236,14 +246,12 @@
   <main class="why-koba">
     <h1>WHY KOBA</h1>
     <h2>Fizz that hits different.<br>Sip bold. Feel unstoppable.</h2>
-
     <p class="intro-bold">For new, bold flavours you can always depend on. We do different.</p>
     <p class="intro-bold">
       KOBA Organics is kombucha that doesn’t play it safe. We craft naturally fermented,
       probiotic-rich fizz with flavour that actually shows up — not the face-scrunching
       vinegar punch you get from some other kombuchas.
     </p>
-
     <h2>What makes KOBA… KOBA</h2>
     <div class="feature-list">
       <div class="feature-box">
@@ -263,10 +271,8 @@
         <div class="feature-subtext">No added sugar. 100% organic ingredients. Nothing fake.</div>
       </div>
     </div>
-
     <h3>💬 The KOBA Promise</h3>
     <p class="promise-bold">We don’t do fake.<br>We don’t do kombucha that tastes like regret.<br>We do bold, balanced, feel-good fizz — every single time.</p>
-
     <h3>Nutritional Information</h3>
     <table class="nutrition-table">
       <tr>
