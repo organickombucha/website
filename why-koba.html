@@ -40,10 +40,15 @@
       padding: 0 6%;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between; /* Changed to space-between so logo is center + button on left */
       border-bottom: 1px solid rgba(107, 62, 0, 0.08);
       backdrop-filter: blur(10px);
       z-index: 1000;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 2rem; /* Space between button and centered logo */
     }
     .logo-link {
       display: block;
@@ -56,6 +61,49 @@
       vertical-align: middle;
       background-color: transparent !important;
       mix-blend-mode: multiply;
+    }
+    /* Exact BUY button from homepage */
+    .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #246A1E;
+      color: white;
+      text-decoration: none;
+      border-radius: 9999px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .button:hover {
+      background-color: #1f5718;
+      transform: translateY(-2px);
+    }
+    .button_text {
+      position: relative;
+    }
+    .button_text_content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .button_text_content.is-1 {
+      opacity: 1;
+    }
+    .button:hover .button_text_content.is-1 {
+      opacity: 0;
+    }
+    .button:hover .button_text_content.is-2 {
+      opacity: 1;
+    }
+    .button_arrow {
+      width: 20px;
+      height: 20px;
     }
     main.why-koba {
       max-width: 1100px;
@@ -75,7 +123,7 @@
     h2 {
       font-size: clamp(2.6rem, 6vw, 3.8rem);
       font-weight: 700;
-      margin: 8rem 0 1.8rem; /* ← Doubled space before "What makes KOBA…" */
+      margin: 8rem 0 1.8rem;
       letter-spacing: -0.015em;
       line-height: 1.15;
       color: var(--text);
@@ -83,7 +131,7 @@
     h3 {
       font-size: 2.1rem;
       font-weight: 700;
-      margin: 6rem 0 1.2rem; /* ← Same 6rem top margin for both "The KOBA Promise" and "Nutritional Information" */
+      margin: 6rem 0 1.2rem;
       color: var(--text);
     }
     .intro-bold,
@@ -146,28 +194,48 @@
       .header { height: 72px; padding: 0 7%; }
       body { padding-top: 80px; }
       main.why-koba { padding: 1.5rem 7% 4rem; }
-      h2 { margin: 6rem 0 1.8rem; } /* Scaled down proportionally */
-      h3 { margin: 5rem 0 1.2rem; }
       .feature-title { font-size: 2.6rem; }
       .intro-bold, .feature-subtext, .promise-bold { font-size: 1.45rem; }
     }
     @media (max-width: 600px) {
       :root { --logo-height: 42px; }
-      .header { height: 68px; padding: 0 8%; }
-      body { padding-top: 76px; font-size: 1.05rem; }
+      .header { height: 68px; padding: 0 8%; flex-direction: column; gap: 1rem; }
+      body { padding-top: 120px; font-size: 1.05rem; }
       main.why-koba { padding: 1rem 8% 4rem; }
-      h2 { margin: 5rem 0 1.8rem; }
-      h3 { margin: 4rem 0 1.2rem; }
       .feature-title { font-size: 2.2rem; }
       .intro-bold, .feature-subtext, .promise-bold { font-size: 1.3rem; }
+      .header-left { justify-content: center; }
     }
   </style>
 </head>
 <body>
   <div class="header">
-    <a href="/" class="logo-link">
-      <img src="images/webclip.png" alt="Koba Organics Logo">
-    </a>
+    <div class="header-left">
+      <!-- BUY button from homepage - exact copy -->
+      <a href="#" class="button">
+        <div class="button_text">
+          <p class="button_text_content is-1">BUY</p>
+          <p class="button_text_content is-2">BUY</p>
+        </div>
+        <div class="button_arrow">
+          <div class="button_arrow_icon is-1 w-embed">
+            <svg width="100%" height="100%" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.351562 0.5H10.3516M10.3516 0.5V10.5M10.3516 0.5L0.351562 10.5" stroke="white"></path>
+            </svg>
+          </div>
+          <div class="button_arrow_icon is-2 w-embed">
+            <svg width="100%" height="100%" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.351562 0.5H10.3516M10.3516 0.5V10.5M10.3516 0.5L0.351562 10.5" stroke="white"></path>
+            </svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Centered logo -->
+      <a href="/" class="logo-link">
+        <img src="images/webclip.png" alt="Koba Organics Logo">
+      </a>
+    </div>
   </div>
 
   <main class="why-koba">
@@ -181,7 +249,6 @@
       vinegar punch you get from some other kombuchas.
     </p>
 
-    <!-- Doubled space before this h2 -->
     <h2>What makes KOBA… KOBA</h2>
     <div class="feature-list">
       <div class="feature-box">
@@ -202,7 +269,6 @@
       </div>
     </div>
 
-    <!-- Both sections now have the same 6rem top margin -->
     <h3>💬 The KOBA Promise</h3>
     <p class="promise-bold">We don’t do bland. We don’t do fake. Just bold, balanced, delicious fizz.</p>
 
