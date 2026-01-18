@@ -9,7 +9,7 @@
   <style>
     :root {
       --bg: #FFEEDB;
-      --text: #784001cc; /* ← Updated to exact homepage paragraph color with opacity */
+      --text: #784001; /* ← Updated to #784001 as requested (solid, no transparency) */
       --accent: #8B4513;
       --box-bg: #FFEEDB;
       --border: #E0C9B0;
@@ -61,8 +61,8 @@
       margin: 0 auto;
       padding: 2rem 6% 4rem;
     }
-    h1, h2, h3, p, strong, td, th, .feature-box {
-      color: var(--text); /* Ensures everything uses the new color */
+    h1, h2, h3, p, strong, td, th, .feature-box, .feature-subtext {
+      color: var(--text); /* Ensures all text uses the new color */
     }
     h1 {
       font-size: clamp(3.8rem, 9vw, 5.8rem);
