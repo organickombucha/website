@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WHY KOBA | Koba Organics</title>
-
-  <!-- Switzer Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Switzer:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  
+  <!-- Switzer – great modern sans, very popular in AU wellness brands -->
+  <link href="https://fonts.googleapis.com/css2?family=Switzer:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
   <style>
     /* =====================
        BASE STYLES
        ===================== */
-    body {
-      font-family: 'Switzer', sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding-top: 90px;
-      background-color: #FFEEDB;
-      color: #794000;
-      font-weight: 700;
+    :root {
+      --bg: #FFF8F0;           /* softer warm off-white/peach */
+      --text: #5C2F00;         /* rich warm brown */
+      --accent: #8B4513;       /* deeper cinnamon accent if needed */
+      --box-bg: #FFFBF5;       /* very light cream */
+      --border: #D9BFA0;       /* soft terracotta border */
     }
 
-    h1, h2, h3, p, a, th, td, .feature-box {
-      font-weight: 700 !important;
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Switzer', system-ui, -apple-system, sans-serif;
+      line-height: 1.65;
+      margin: 0;
+      padding-top: 100px;      /* space for fixed header */
+      background-color: var(--bg);
+      color: var(--text);
+      font-weight: 400;
     }
 
     /* =====================
@@ -35,192 +42,231 @@
       top: 0;
       left: 0;
       width: 100%;
-      background-color: #FFEEDB;
-      padding: 20px;
+      background-color: var(--bg);
+      padding: 1.4rem 5%;
       z-index: 1000;
       display: flex;
       align-items: center;
-      box-sizing: border-box;
+      border-bottom: 1px solid rgba(92, 47, 0, 0.08);
+      backdrop-filter: blur(8px);
     }
 
     .logo-link img {
-      height: 45px;
+      height: 48px;
       width: auto;
-      display: block;
     }
 
     /* =====================
        TYPOGRAPHY
        ===================== */
     h1 {
+      font-size: clamp(2.6rem, 7vw, 4.2rem);
+      font-weight: 700;
       text-align: center;
-      margin-bottom: 30px;
+      margin: 0 0 1.2rem;
+      letter-spacing: -0.02em;
       text-transform: uppercase;
+      color: var(--text);
     }
 
     h2 {
-      margin-top: 30px;
+      font-size: clamp(1.9rem, 5vw, 2.8rem);
+      font-weight: 600;
+      margin: 3.5rem 0 1.5rem;
+      letter-spacing: -0.01em;
     }
 
     h3 {
-      margin-top: 20px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 2.5rem 0 1rem;
     }
 
     p {
-      margin-bottom: 15px;
-      font-size: 16px;
+      font-size: 1.125rem;
+      margin-bottom: 1.4rem;
+      max-width: 680px;
+    }
+
+    strong {
+      color: var(--text);
     }
 
     /* =====================
        FEATURE BOXES
        ===================== */
+    .feature-list {
+      display: grid;
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+      max-width: 720px;
+    }
+
     .feature-box {
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 20px;
-      background-color: #FFF0E0;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
-      font-size: 16px;
+      background-color: var(--box-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.8rem 2rem;
+      font-size: 1.125rem;
+      line-height: 1.5;
+      box-shadow: 0 4px 12px rgba(92, 47, 0, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(92, 47, 0, 0.08);
+    }
+
+    .feature-box strong {
+      display: block;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
     }
 
     /* =====================
-       TABLE
+       TABLE – cleaner & more modern
        ===================== */
-    table {
-      border-collapse: collapse;
+    .nutrition-table {
       width: 100%;
-      margin-top: 20px;
-      font-size: 16px;
+      max-width: 680px;
+      margin: 2.5rem auto;
+      border-collapse: collapse;
+      font-size: 1.05rem;
     }
 
-    th, td {
-      border: 1px solid #794000;
-      padding: 10px;
+    .nutrition-table th,
+    .nutrition-table td {
+      padding: 14px 16px;
       text-align: left;
+      border-bottom: 1px solid var(--border);
     }
 
-    th {
-      background-color: #FFEEDB;
+    .nutrition-table th {
+      background-color: rgba(255, 251, 245, 0.6);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+    }
+
+    .nutrition-table td:first-child {
+      font-weight: 500;
     }
 
     a {
-      text-decoration: none;
-      color: #794000;
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     /* =====================
        MOBILE
        ===================== */
-    @media (max-width: 600px) {
-      body {
-        padding-top: 80px;
-      }
+    @media (max-width: 768px) {
+      body { padding-top: 80px; }
+      .header { padding: 1.2rem 6%; }
+      .logo-link img { height: 42px; }
+      h1 { font-size: 3.2rem; }
+      .feature-box { padding: 1.6rem; }
+    }
 
-      .header {
-        justify-content: center;
-      }
-
-      .logo-link img {
-        height: 38px;
-      }
-
-      table {
-        font-size: 14px;
-      }
+    @media (max-width: 480px) {
+      h1 { font-size: 2.8rem; }
+      h2 { font-size: 2.2rem; }
+      p, .feature-box { font-size: 1.05rem; }
     }
   </style>
 </head>
-
 <body>
 
-  <!-- WHY KOBA WRAPPER (IMPORTANT) -->
-  <div class="why-koba">
+  <!-- Sticky Header -->
+  <div class="header">
+    <a href="/" class="logo-link">
+      <img src="koba-logo.png" alt="Koba Organics Logo">
+    </a>
+  </div>
 
-    <!-- Sticky Header -->
-    <div class="header">
-      <a href="index.html" class="logo-link">
-        <img src="koba-logo.png" alt="Koba Organics">
-      </a>
-    </div>
+  <main class="why-koba" style="max-width: 920px; margin: 0 auto; padding: 0 5%;">
 
     <h1>WHY KOBA</h1>
 
-    <h2>Fizz that hits different. Sip bold. Feel unstoppable.</h2>
+    <h2>Fizz that hits different.<br>Sip bold. Feel unstoppable.</h2>
 
-    <p>For new, bold flavours you can always depend on us. We do different.</p>
+    <p>For new, bold flavours you can always depend on. We do different.</p>
 
     <p>
-      KOBA Organics is kombucha that doesn’t play it safe. We craft naturally fermented,
-      probiotic-rich fizz with flavour that actually shows up — not the face-scrunching
+      KOBA Organics is kombucha that doesn’t play it safe. We craft naturally fermented, 
+      probiotic-rich fizz with flavour that actually shows up — not the face-scrunching 
       vinegar punch you get from some other kombuchas.
     </p>
 
     <h2>What makes KOBA… KOBA</h2>
 
-    <div class="feature-box">
-      🔥 <strong>Bold Flavours, No Compromises:</strong>
-      Gooseberry sparkle. Pineapple sweetness. Turmeric with attitude.
-    </div>
-
-    <div class="feature-box">
-      😌 <strong>Smooth, Not Vinegary:</strong>
-      Bright, refreshing, clean fizz.
-    </div>
-
-    <div class="feature-box">
-      🌱 <strong>Gut-Friendly by Nature:</strong>
-      Packed with live probiotics.
-    </div>
-
-    <div class="feature-box">
-      🍃 <strong>Clean & Organic:</strong>
-      No added sugar. 100% organic ingredients.
+    <div class="feature-list">
+      <div class="feature-box">
+        <strong>🔥 Bold Flavours, No Compromises</strong>
+        Gooseberry sparkle. Pineapple sweetness. Turmeric with attitude.
+      </div>
+      
+      <div class="feature-box">
+        <strong>😌 Smooth, Not Vinegary</strong>
+        Bright, refreshing, clean fizz — easy to drink all day.
+      </div>
+      
+      <div class="feature-box">
+        <strong>🌱 Gut-Friendly by Nature</strong>
+        Packed with live probiotics from natural fermentation.
+      </div>
+      
+      <div class="feature-box">
+        <strong>🍃 Clean & Organic</strong>
+        No added sugar. 100% organic ingredients. Nothing fake.
+      </div>
     </div>
 
     <h3>💬 The KOBA Promise</h3>
-    <p>We don’t do bland. We don’t do fake. Just bold, balanced fizz.</p>
+    <p>We don’t do bland. We don’t do fake. Just bold, balanced, delicious fizz.</p>
 
     <h3>NUTRITION INFORMATION</h3>
-
-    <table>
+    <table class="nutrition-table">
       <tr>
         <th></th>
         <th>PER 100ML</th>
-        <th>PER SERVE</th>
+        <th>PER SERVE (350ML)</th>
       </tr>
       <tr>
         <td>ENERGY</td>
-        <td>50 KJ</td>
-        <td>175 KJ</td>
+        <td>50 kJ</td>
+        <td>175 kJ</td>
       </tr>
       <tr>
         <td>PROTEIN</td>
-        <td>&lt;1G</td>
-        <td>&lt;0.35G</td>
+        <td>&lt;1 g</td>
+        <td>&lt;0.35 g</td>
       </tr>
       <tr>
-        <td>FAT, TOTAL - SATURATED</td>
-        <td>&lt;1G</td>
-        <td>&lt;0.35G</td>
+        <td>FAT, TOTAL<br>— SATURATED</td>
+        <td>&lt;1 g<br>— &lt;1 g</td>
+        <td>&lt;0.35 g<br>— &lt;0.35 g</td>
       </tr>
       <tr>
-        <td>CARBOHYDRATE - SUGARS</td>
-        <td>2.9G</td>
-        <td>10G</td>
+        <td>CARBOHYDRATE<br>— SUGARS</td>
+        <td>2.9 g<br>— 2.9 g</td>
+        <td>10 g<br>— 10 g</td>
       </tr>
       <tr>
         <td>DIETARY FIBRE</td>
-        <td>&lt;1G</td>
-        <td>&lt;0.35G</td>
+        <td>&lt;1 g</td>
+        <td>&lt;0.35 g</td>
       </tr>
       <tr>
         <td>SODIUM</td>
-        <td>2MG</td>
-        <td>7MG</td>
+        <td>2 mg</td>
+        <td>7 mg</td>
       </tr>
     </table>
 
-  </div>
-
+  </main>
 </body>
 </html>
