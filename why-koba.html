@@ -75,7 +75,7 @@
     h2 {
       font-size: clamp(2.6rem, 6vw, 3.8rem);
       font-weight: 700;
-      margin: 4rem 0 1.8rem;
+      margin: 8rem 0 1.8rem; /* ← Doubled space before "What makes KOBA…" */
       letter-spacing: -0.015em;
       line-height: 1.15;
       color: var(--text);
@@ -83,27 +83,25 @@
     h3 {
       font-size: 2.1rem;
       font-weight: 700;
-      margin: 3rem 0 1.2rem;
+      margin: 6rem 0 1.2rem; /* ← Same 6rem top margin for both "The KOBA Promise" and "Nutritional Information" */
       color: var(--text);
     }
-    /* The reference style - used for "For new, bold flavours..." */
-    .intro-bold {
+    .intro-bold,
+    .feature-subtext,
+    .promise-bold {
       font-size: 1.65rem;
       line-height: 1.68;
       font-weight: 700;
       margin-bottom: 1.6rem;
       color: var(--text-opacity);
     }
-    /* Now all the requested lines use the exact same style as above */
-    .feature-subtext,
-    .promise-bold,
-    .nutrition-table td,
-    .nutrition-table th {
-      font-size: 1.65rem !important;
-      line-height: 1.68;
-      font-weight: 700 !important;
-      color: var(--text-opacity) !important;
-      margin: 0;
+    .feature-title {
+      font-size: 3rem;
+      line-height: 1.1;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+      color: #784001 !important;
+      display: block;
     }
     .feature-list {
       display: grid;
@@ -121,20 +119,14 @@
       transition: all 0.25s ease;
       color: var(--text);
     }
-    .feature-title {
-      font-size: 3rem;
-      line-height: 1.1;
-      font-weight: 700;
-      margin-bottom: 0.8rem;
-      color: #784001 !important;
-      display: block;
-    }
     .nutrition-table {
       width: 100%;
       max-width: 760px;
       margin: 3rem auto;
       border-collapse: collapse;
+      font-size: 1.15rem;
       font-weight: 700;
+      color: var(--text-opacity);
     }
     .nutrition-table th,
     .nutrition-table td {
@@ -144,6 +136,7 @@
     }
     .nutrition-table th {
       background-color: rgba(255, 238, 219, 0.6);
+      font-weight: 700;
       text-transform: uppercase;
       font-size: 1rem;
       letter-spacing: 0.05em;
@@ -153,16 +146,20 @@
       .header { height: 72px; padding: 0 7%; }
       body { padding-top: 80px; }
       main.why-koba { padding: 1.5rem 7% 4rem; }
-      .intro-bold, .feature-subtext, .promise-bold { font-size: 1.45rem; }
+      h2 { margin: 6rem 0 1.8rem; } /* Scaled down proportionally */
+      h3 { margin: 5rem 0 1.2rem; }
       .feature-title { font-size: 2.6rem; }
+      .intro-bold, .feature-subtext, .promise-bold { font-size: 1.45rem; }
     }
     @media (max-width: 600px) {
       :root { --logo-height: 42px; }
       .header { height: 68px; padding: 0 8%; }
       body { padding-top: 76px; font-size: 1.05rem; }
       main.why-koba { padding: 1rem 8% 4rem; }
-      .intro-bold, .feature-subtext, .promise-bold { font-size: 1.3rem; }
+      h2 { margin: 5rem 0 1.8rem; }
+      h3 { margin: 4rem 0 1.2rem; }
       .feature-title { font-size: 2.2rem; }
+      .intro-bold, .feature-subtext, .promise-bold { font-size: 1.3rem; }
     }
   </style>
 </head>
@@ -184,26 +181,28 @@
       vinegar punch you get from some other kombuchas.
     </p>
 
+    <!-- Doubled space before this h2 -->
     <h2>What makes KOBA… KOBA</h2>
     <div class="feature-list">
       <div class="feature-box">
         <strong class="feature-title">🔥 Bold Flavours, No Compromises</strong>
-        <div class="feature-subtext">Gooseberry sparkle. Pineapple sweetness. Turmeric with attitude.</div>
+        Gooseberry sparkle. Pineapple sweetness. Turmeric with attitude.
       </div>
       <div class="feature-box">
         <strong class="feature-title">😌 Smooth, Not Vinegary</strong>
-        <div class="feature-subtext">Bright, refreshing, clean fizz — easy to drink all day.</div>
+        Bright, refreshing, clean fizz — easy to drink all day.
       </div>
       <div class="feature-box">
         <strong class="feature-title">🌱 Gut-Friendly by Nature</strong>
-        <div class="feature-subtext">Packed with live probiotics from natural fermentation.</div>
+        Packed with live probiotics from natural fermentation.
       </div>
       <div class="feature-box">
         <strong class="feature-title">🍃 Clean & Organic</strong>
-        <div class="feature-subtext">No added sugar. 100% organic ingredients. Nothing fake.</div>
+        No added sugar. 100% organic ingredients. Nothing fake.
       </div>
     </div>
 
+    <!-- Both sections now have the same 6rem top margin -->
     <h3>💬 The KOBA Promise</h3>
     <p class="promise-bold">We don’t do bland. We don’t do fake. Just bold, balanced, delicious fizz.</p>
 
