@@ -10,7 +10,7 @@
     :root {
       --bg: #FFEEDB;
       --text: #784001;
-      --text-opacity: #784001cc; /* 80% opacity for most content */
+      --text-opacity: #784001cc;
       --accent: #8B4513;
       --box-bg: #FFEEDB;
       --border: #E0C9B0;
@@ -62,9 +62,6 @@
       margin: 0 auto;
       padding: 2rem 6% 4rem;
     }
-    h1, h2, h3 {
-      color: var(--text);
-    }
     h1 {
       font-size: clamp(3.8rem, 9vw, 5.8rem);
       font-weight: 700;
@@ -73,6 +70,7 @@
       letter-spacing: -0.03em;
       text-transform: uppercase;
       line-height: 1.05;
+      color: var(--text);
     }
     h2 {
       font-size: clamp(2.6rem, 6vw, 3.8rem);
@@ -80,28 +78,17 @@
       margin: 4rem 0 1.8rem;
       letter-spacing: -0.015em;
       line-height: 1.15;
+      color: var(--text);
     }
     h3 {
       font-size: 2.1rem;
       font-weight: 700;
       margin: 3rem 0 1.2rem;
+      color: var(--text);
     }
-    /* Only the four specific headlines get solid color + big size */
-    .feature-title {
-      font-size: 1.85rem;
-      line-height: 1.2;
-      font-weight: 700;
-      margin-bottom: 0.8rem;
-      color: #784001 !important; /* Solid color - no opacity */
-      display: block;
-    }
-    /* All other targeted content keeps 80% opacity */
-    .intro-bold,
-    .feature-subtext,
-    .promise-bold,
-    .nutrition-table td,
-    .nutrition-table th {
-      color: var(--text-opacity) !important;
+    /* Doubled space before Nutritional Information heading */
+    h3.nutrition-heading {
+      margin-top: 6rem !important; /* ← Doubled from ~3rem to 6rem */
     }
     .intro-bold,
     .feature-subtext,
@@ -110,9 +97,15 @@
       line-height: 1.68;
       font-weight: 700;
       margin-bottom: 1.6rem;
+      color: var(--text-opacity);
     }
-    strong {
+    .feature-title {
+      font-size: 1.85rem;
+      line-height: 1.2;
       font-weight: 700;
+      margin-bottom: 0.8rem;
+      color: #784001 !important;
+      display: block;
     }
     .feature-list {
       display: grid;
@@ -137,6 +130,7 @@
       border-collapse: collapse;
       font-size: 1.15rem;
       font-weight: 700;
+      color: var(--text-opacity);
     }
     .nutrition-table th,
     .nutrition-table td {
@@ -156,16 +150,18 @@
       .header { height: 72px; padding: 0 7%; }
       body { padding-top: 80px; }
       main.why-koba { padding: 1.5rem 7% 4rem; }
-      .feature-title { font-size: 1.65rem; }
+      h3.nutrition-heading { margin-top: 5rem !important; }
       .intro-bold, .feature-subtext, .promise-bold { font-size: 1.45rem; }
+      .feature-title { font-size: 1.65rem; }
     }
     @media (max-width: 600px) {
       :root { --logo-height: 42px; }
       .header { height: 68px; padding: 0 8%; }
       body { padding-top: 76px; font-size: 1.05rem; }
       main.why-koba { padding: 1rem 8% 4rem; }
-      .feature-title { font-size: 1.5rem; }
+      h3.nutrition-heading { margin-top: 4rem !important; }
       .intro-bold, .feature-subtext, .promise-bold { font-size: 1.3rem; }
+      .feature-title { font-size: 1.5rem; }
     }
   </style>
 </head>
@@ -210,7 +206,8 @@
     <h3>💬 The KOBA Promise</h3>
     <p class="promise-bold">We don’t do bland. We don’t do fake. Just bold, balanced, delicious fizz.</p>
 
-    <h3>Nutritional Information</h3>
+    <!-- Doubled space before Nutritional Information -->
+    <h3 class="nutrition-heading">Nutritional Information</h3>
     <table class="nutrition-table">
       <tr>
         <th></th>
