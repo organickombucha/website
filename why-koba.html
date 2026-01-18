@@ -11,10 +11,11 @@
   <style>
     :root {
       --bg: #FFEEDB;
-      --text: #6B3E00;       /* Lightened from #5C2F00 for better homepage match – rich but not too dark */
+      --text: #6B3E00;       /* Kept lighter brown for body text consistency */
       --accent: #8B4513;
       --box-bg: #FFF5E9;
       --border: #E0C9B0;
+      --logo-height: 56px;   /* Slightly taller to better match typical homepage scale */
     }
     * {
       box-sizing: border-box;
@@ -23,13 +24,13 @@
       font-family: 'Switzer', system-ui, -apple-system, sans-serif;
       line-height: 1.68;
       margin: 0;
-      padding-top: 100px;
+      padding-top: 110px;    /* Increased slightly to give more breathing room under header */
       background-color: var(--bg);
       color: var(--text);
       font-weight: 700;
       font-size: 1.125rem;
     }
-    /* Header */
+    /* Header – better alignment to match homepage left-side feel */
     .header {
       position: fixed;
       top: 0;
@@ -40,15 +41,21 @@
       z-index: 1000;
       display: flex;
       align-items: center;
+      justify-content: flex-start; /* Align logo to left side, like most homepages */
       border-bottom: 1px solid rgba(92, 47, 0, 0.1);
       backdrop-filter: blur(10px);
     }
+    .logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
     .logo-link img {
-      height: 52px;
+      height: var(--logo-height);
       width: auto;
-      /* Slight warm tint + brightness to better match typical homepage logo appearance */
-      filter: brightness(1.08) sepia(0.15) hue-rotate(20deg) saturate(1.2);
-      /* Remove filter line above if homepage logo is pure without tint */
+      display: block;
+      /* Removed filter – use clean PNG to match homepage exactly */
+      /* If still off, try: filter: brightness(1.05); */
     }
     main.why-koba {
       max-width: 1100px;
@@ -63,7 +70,7 @@
       letter-spacing: -0.03em;
       text-transform: uppercase;
       line-height: 1.05;
-      color: var(--text); /* explicit for consistency */
+      color: var(--text);
     }
     h2 {
       font-size: clamp(2.6rem, 6vw, 3.8rem);
@@ -138,14 +145,14 @@
       font-size: 1rem;
       letter-spacing: 0.05em;
     }
-    /* Mobile */
+    /* Mobile adjustments */
     @media (max-width: 900px) {
       main.why-koba { padding: 0 7%; }
       .header { padding: 1.3rem 7%; }
-      .logo-link img { height: 46px; }
+      :root { --logo-height: 48px; }
     }
     @media (max-width: 600px) {
-      body { padding-top: 85px; font-size: 1.05rem; }
+      body { padding-top: 95px; font-size: 1.05rem; }
       h1 { font-size: 3.4rem; }
       h2 { font-size: 2.6rem; }
       h3 { font-size: 1.9rem; }
@@ -155,7 +162,7 @@
   </style>
 </head>
 <body>
-  <!-- Sticky Header -->
+  <!-- Sticky Header – aligned left like most homepages -->
   <div class="header">
     <a href="/" class="logo-link">
       <img src="koba-logo.png" alt="Koba Organics Logo">
