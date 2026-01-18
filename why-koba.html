@@ -8,12 +8,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Switzer:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #FFEEDB; /* Exact homepage background – light peach/cream */
+      --bg: #FFEEDB;
       --text: #6B3E00;
       --accent: #8B4513;
       --box-bg: #FFEEDB;
       --border: #E0C9B0;
-      --logo-height: 90px; /* Closest common match to homepage logo size on desktop */
+      --logo-height: 90px;
     }
     * {
       box-sizing: border-box;
@@ -25,43 +25,48 @@
       line-height: 1.68;
       background-color: var(--bg);
       color: var(--text);
-      font-weight: 700;
+      font-weight: 500; /* ← Changed: medium weight like homepage body text */
       font-size: 1.125rem;
-      padding-top: 88px; /* Adjusted to fit a ~70–80px header perfectly */
+      padding-top: 88px;
     }
     .header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      height: 80px; /* More consistent header height matching many homepages */
-      background-color: var(--bg); /* Identical to homepage */
-      padding: 0 6%; /* Horizontal padding same as typical homepage */
+      height: 80px;
+      background-color: var(--bg);
+      padding: 0 6%;
       display: flex;
       align-items: center;
-      justify-content: center; /* ← CHANGED HERE: centers the logo horizontally */
+      justify-content: center;
       border-bottom: 1px solid rgba(107, 62, 0, 0.08);
       backdrop-filter: blur(10px);
       z-index: 1000;
     }
     .logo-link {
       display: block;
-      line-height: 0; /* Helps with precise vertical centering */
+      line-height: 0;
     }
     .logo-link img {
       height: var(--logo-height);
       width: auto;
       display: block;
       vertical-align: middle;
-      background-color: transparent !important; /* Force no background */
-      mix-blend-mode: multiply; /* Makes white disappear on colored bg (works great for light logos) */
-      /* OR alternative if multiply is too dark: */
-      /* filter: drop-shadow(0 0 0 #FFEEDB) brightness(1.02); */
+      background-color: transparent !important;
+      mix-blend-mode: multiply;
     }
     main.why-koba {
       max-width: 1100px;
       margin: 0 auto;
       padding: 2rem 6% 4rem;
+    }
+    p {
+      font-size: 1.2rem; /* ← Matches homepage paragraph size */
+      line-height: 1.68;
+      font-weight: 500; /* ← Normal/medium weight like homepage */
+      margin-bottom: 1.6rem;
+      color: var(--text);
     }
     h1 {
       font-size: clamp(3.8rem, 9vw, 5.8rem);
@@ -87,9 +92,6 @@
       margin: 3rem 0 1.2rem;
       color: var(--text);
     }
-    p, td, th {
-      color: var(--text);
-    }
     strong {
       font-weight: 700;
       color: var(--text);
@@ -108,12 +110,7 @@
       line-height: 1.55;
       box-shadow: 0 6px 16px rgba(92, 47, 0, 0.05);
       transition: all 0.25s ease;
-      font-weight: 700;
       color: var(--text);
-    }
-    .feature-box:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 32px rgba(92, 47, 0, 0.09);
     }
     .feature-box strong {
       display: block;
@@ -121,20 +118,25 @@
       margin-bottom: 0.7rem;
       font-weight: 700;
     }
+    .feature-box p, .feature-box div:not(.feature-box strong) {
+      font-weight: 500; /* ← Ensures sub-lines match homepage paragraph weight */
+      font-size: 1.2rem;
+      line-height: 1.68;
+      margin: 0;
+    }
     .nutrition-table {
       width: 100%;
       max-width: 760px;
       margin: 3rem auto;
       border-collapse: collapse;
       font-size: 1.15rem;
-      font-weight: 700;
+      font-weight: 500; /* Slightly lighter than before */
     }
     .nutrition-table th,
     .nutrition-table td {
       padding: 16px 20px;
       text-align: left;
       border-bottom: 1px solid var(--border);
-      font-weight: 700;
       color: var(--text);
     }
     .nutrition-table th {
@@ -164,15 +166,18 @@
       <img src="images/webclip.png" alt="Koba Organics Logo">
     </a>
   </div>
+
   <main class="why-koba">
     <h1>WHY KOBA</h1>
     <h2>Fizz that hits different.<br>Sip bold. Feel unstoppable.</h2>
+
     <p>For new, bold flavours you can always depend on. We do different.</p>
     <p>
       KOBA Organics is kombucha that doesn’t play it safe. We craft naturally fermented,
       probiotic-rich fizz with flavour that actually shows up — not the face-scrunching
       vinegar punch you get from some other kombuchas.
     </p>
+
     <h2>What makes KOBA… KOBA</h2>
     <div class="feature-list">
       <div class="feature-box">
@@ -192,8 +197,10 @@
         No added sugar. 100% organic ingredients. Nothing fake.
       </div>
     </div>
+
     <h3>💬 The KOBA Promise</h3>
     <p>We don’t do bland. We don’t do fake. Just bold, balanced, delicious fizz.</p>
+
     <h3>Nutritional Information</h3>
     <table class="nutrition-table">
       <tr>
