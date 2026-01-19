@@ -165,10 +165,30 @@
               line-height: 1;
               margin: 0;
             }
-            /* Keep only vertical alignment fix — Webflow now fully controls hover & duplication */
             .navbar_cta .button {
               position: relative;
               top: -23px;
+            }
+
+            /* Force-restore Webflow-style text slide on hover for all three buttons */
+            .navbar_cta .button:hover .button_text_content.is-1 {
+              transform: translateY(-100%);
+              opacity: 0;
+            }
+            .navbar_cta .button:hover .button_text_content.is-2 {
+              transform: translateY(0);
+              opacity: 1;
+            }
+            .navbar_cta .button_text_content.is-2 {
+              position: absolute;
+              left: 0;
+              transform: translateY(100%);
+              opacity: 0;
+              transition: all 0.3s ease;
+            }
+            .navbar_cta .button_text {
+              position: relative;
+              overflow: hidden;
             }
           </style>
           <div class="navbar_cta">
