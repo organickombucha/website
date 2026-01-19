@@ -15,7 +15,7 @@
       }
     });
   </script>
-  <!-- Homepage navbar CSS -->
+  <!-- Homepage navbar CSS – load same as homepage -->
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/components.css" rel="stylesheet" type="text/css">
   <link href="css/kobaorganics.css" rel="stylesheet" type="text/css">
@@ -44,30 +44,10 @@
       font-weight: 500;
       font-size: 1.125rem;
     }
-    /* Logo fixes – adjust these weights/spacing if still not perfect */
-    .logo,
-    .logo_main,
-    .logo_tagline {
-      font-family: 'Montserrat', sans-serif !important;
-    }
-    .logo_main {
-      font-weight: 800 !important; /* KOBA – heavy/bold */
-      letter-spacing: 0.04em !important;
-    }
-    .logo_tagline {
-      font-weight: 500 !important; /* ORGANICS – lighter */
-      letter-spacing: 0.14em !important;
-    }
-    .logo {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      line-height: 0.92;
-    }
-    .navbar_logo_wrapper,
-    .logo_wrapper {
-      min-width: 190px !important; /* tweak 170–220px if width still off */
-    }
+    /* ────────────────────────────────────────
+       Removed logo overrides so homepage CSS wins
+       If still not matching → check kobaorganics.css rules for .logo / .logo_main / .logo_tagline
+    ──────────────────────────────────────── */
     main.why-koba {
       max-width: 1100px;
       margin: 0 auto;
@@ -260,9 +240,5 @@
     <tr><td>Sodium</td><td>2 mg</td><td>7 mg</td></tr>
   </table>
 </main>
-</body>
-</html>
-</main>
-
 </body>
 </html>
