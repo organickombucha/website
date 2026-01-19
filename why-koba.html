@@ -41,6 +41,19 @@
       font-weight: 500;
       font-size: 1.125rem;
     }
+    /* Make navbar fixed/sticky so it doesn't move on scroll */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: var(--bg); /* keeps background consistent */
+    }
+    /* Add padding to main content so it doesn't hide under fixed navbar */
+    main.why-koba {
+      padding-top: 120px; /* adjust this value if navbar height changes */
+    }
     main.why-koba {
       max-width: 1100px;
       margin: 0 auto;
@@ -50,23 +63,21 @@
       font-size: clamp(3.8rem, 9vw, 5.8rem);
       font-weight: 700;
       text-align: center;
-      margin: 0 0 1.5rem;
+      margin: 3rem 0 4rem;
       letter-spacing: -0.03em;
       text-transform: uppercase;
       line-height: 1.05;
       color: var(--text);
-      opacity: 0; /* start hidden */
-      transform: translateX(100%); /* start off-screen right */
-      animation: glideIn 2.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; /* smoother + slower glide */
+      opacity: 0;
+      transform: translateX(100%);
+      animation: glideIn 2.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
     }
-
     @keyframes glideIn {
       to {
         opacity: 1;
         transform: translateX(0);
       }
     }
-
     h2 {
       font-size: clamp(2.6rem, 6vw, 3.8rem);
       font-weight: 700;
