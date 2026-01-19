@@ -166,32 +166,17 @@
             .navbar_cta {
               display: flex;
               gap: 1rem;
-              align-items: center; /* vertical center buttons to logo */
+              align-items: center;          /* vertical center buttons to logo */
             }
             .button_text p {
-              line-height: 1; /* tighten text line-height to match homepage buttons more closely */
+              line-height: 1;               /* tighten text line-height to match homepage buttons more closely */
               margin: 0;
             }
             .button {
               display: inline-flex;
-              align-items: center; /* ensure arrow and text vertically centered inside button */
+              align-items: center;          /* ensure arrow and text vertically centered inside button */
               justify-content: center;
             }
-
-            /* ────────────── ONLY CHANGE ────────────── */
-            .navbar_cta a[href="why-koba.html"] {
-              animation: moveLeftRight 6s infinite ease-in-out;
-            }
-
-            @keyframes moveLeftRight {
-              0%, 100% {
-                transform: translateX(0);
-              }
-              50% {
-                transform: translateX(-8px);
-              }
-            }
-            /* ──────────────────────────────────────── */
           </style>
           <div class="navbar_cta">
             <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x6ad65cbcdbcb5931:0xd2612d9bb907481e?entry=s&sa=X&ved=2ahUKEwjW_Ynp6b6RAxX9klYBHXMlMgsQ4kB6BAgUEAA&hl=en"
