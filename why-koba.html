@@ -190,7 +190,7 @@
               overflow: hidden;
             }
 
-            /* NEW: Dropdown styles – only for BUY button */
+            /* Dropdown styles – only for BUY button */
             .buy-dropdown {
               position: absolute;
               top: 100%;
@@ -214,6 +214,7 @@
               color: var(--text);
               text-decoration: none;
               font-weight: 500;
+              text-align: left; /* ← only change: left-aligned text */
               transition: background 0.2s;
             }
             .buy-dropdown a:hover {
@@ -275,7 +276,7 @@
                   </svg>
                 </div>
               </div>
-              <!-- Dropdown menu (hidden by default) -->
+              <!-- Dropdown menu -->
               <div id="buyDropdown" class="buy-dropdown">
                 <a href="#">1 x 350ml - $4.50</a>
                 <a href="#">6 x 350ml - $27</a>
