@@ -55,16 +55,18 @@
       text-transform: uppercase;
       line-height: 1.05;
       color: var(--text);
-      opacity: 0;
-      transform: translateX(100%);
-      animation: glideIn 2.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+      opacity: 0; /* start hidden */
+      transform: translateX(100%); /* start off-screen right */
+      animation: glideIn 2.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; /* smoother + slower glide */
     }
+
     @keyframes glideIn {
       to {
         opacity: 1;
         transform: translateX(0);
       }
     }
+
     h2 {
       font-size: clamp(2.6rem, 6vw, 3.8rem);
       font-weight: 700;
@@ -134,11 +136,21 @@
       font-size: 1rem;
       letter-spacing: 0.05em;
     }
+    @media (max-width: 900px) {
+      :root { --logo-height: 46px; }
+      main.why-koba { padding: 1.5rem 7% 4rem; }
+      .feature-title { font-size: 2.6rem; }
+      .intro-bold, .feature-subtext, .promise-bold { font-size: 1.45rem; }
+    }
+    @media (max-width: 600px) {
+      :root { --logo-height: 42px; }
+      main.why-koba { padding: 1rem 8% 4rem; }
+      .feature-title { font-size: 2.2rem; }
+      .intro-bold, .feature-subtext, .promise-bold { font-size: 1.3rem; }
+    }
   </style>
 </head>
-
 <body>
-
 <div class="navbar">
   <div class="padding-vertical padding-medium">
     <div class="padding-horizontal padding-huge">
@@ -154,53 +166,189 @@
               </a>
             </div>
           </div>
-
+          <style>
+            .navbar_cta {
+              display: flex;
+              gap: 1rem;
+              align-items: center;
+            }
+            .button_text p {
+              line-height: 1;
+              margin: 0;
+            }
+            .navbar_cta .button {
+              position: relative;
+              top: -23px;
+            }
+            /* Force-restore Webflow-style text slide on hover for all three buttons */
+            .navbar_cta .button:hover .button_text_content.is-1 {
+              transform: translateY(-100%);
+              opacity: 0;
+            }
+            .navbar_cta .button:hover .button_text_content.is-2 {
+              transform: translateY(0);
+              opacity: 1;
+            }
+            .navbar_cta .button_text_content.is-2 {
+              position: absolute;
+              left: 0;
+              transform: translateY(100%);
+              opacity: 0;
+              transition: all 0.55s ease;
+            }
+            .navbar_cta .button_text {
+              position: relative;
+              overflow: hidden;
+            }
+            /* Dropdown styles – only for BUY button */
+            .buy-dropdown {
+              position: absolute;
+              top: 100%;
+              right: 0;
+              background: var(--bg);
+              border: 1px solid var(--border);
+              border-radius: 12px;
+              box-shadow: 0 8px 20px rgba(120, 64, 1, 0.12);
+              min-width: 220px;
+              z-index: 100;
+              margin-top: 8px;
+              padding: 8px 0;
+              display: none;
+            }
+            .buy-dropdown.show {
+              display: block;
+            }
+            .buy-dropdown a {
+              display: block;
+              padding: 12px 20px;
+              color: var(--text);
+              text-decoration: none;
+              font-weight: 500;
+              text-align: left;
+              white-space: nowrap;
+              transition: background 0.2s;
+            }
+            .buy-dropdown a:hover {
+              background: rgba(139, 69, 19, 0.08);
+            }
+          </style>
           <div class="navbar_cta">
-            <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x6ad65cbcdbcb5931:0xd2612d9bb907481e"
+            <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x6ad65cbcdbcb5931:0xd2612d9bb907481e?entry=s&sa=X&ved=2ahUKEwjW_Ynp6b6RAxX9klYBHXMlMgsQ4kB6BAgUEAA&hl=en"
                class="button button-primary hide-mobile w-inline-block">
               <div class="button_text">
                 <p class="button_text_content is-1">STOCKIST</p>
                 <p class="button_text_content is-2">STOCKIST</p>
               </div>
+              <div class="button_arrow">
+                <div class="button_arrow_icon is-1 w-embed">
+                  <svg width="100%" height="100%" viewBox="0 0 28 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.601 0.5C11.8805 0.499869 10.1769 0.838647 8.58731 1.49699C6.99776 2.15533 5.55347 3.12033 4.3369 4.3369C3.12033 5.55347 2.15533 6.99776 1.49699 8.58731C0.838646 10.1769 0.499869 11.8805 0.5 13.601C0.5 23.854 10.502 36.192 13.123 39.223C13.2638 39.384 13.4626 39.4828 13.676 39.4978C13.8894 39.5128 14.1001 39.4428 14.262 39.303L14.342 39.223C16.928 36.18 26.701 23.854 26.701 13.6C26.701 11.8797 26.3622 10.1762 25.7038 8.58685C25.0455 6.99748 24.0805 5.55335 22.8641 4.3369C21.6477 3.12045 20.2035 2.15551 18.6142 1.49718C17.0248 0.838841 15.3213 0.5 13.601 0.5ZM13.601 17.156C12.7223 17.156 11.8632 16.8954 11.1326 16.4072C10.402 15.919 9.83248 15.2251 9.4962 14.4133C9.15992 13.6014 9.07194 12.7081 9.24337 11.8462C9.4148 10.9844 9.83796 10.1927 10.4593 9.57132C11.0807 8.94996 11.8724 8.52681 12.7342 8.35537C13.5961 8.18394 14.4894 8.27192 15.3013 8.6082C16.1131 8.94448 16.807 9.51395 17.2952 10.2446C17.7834 10.9752 18.044 11.8343 18.044 12.713V12.724C18.0411 13.9005 17.5717 15.0277 16.7388 15.8586C15.9059 16.6894 14.7775 17.156 13.601 17.156Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="button_arrow_icon is-2 w-embed">
+                  <svg width="100%" height="100%" viewBox="0 0 28 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.601 0.5C11.8805 0.499869 10.1769 0.838647 8.58731 1.49699C6.99776 2.15533 5.55347 3.12033 4.3369 4.3369C3.12033 5.55347 2.15533 6.99776 1.49699 8.58731C0.838646 10.1769 0.499869 11.8805 0.5 13.601C0.5 23.854 10.502 36.192 13.123 39.223C13.2638 39.384 13.4626 39.4828 13.676 39.4978C13.8894 39.5128 14.1001 39.4428 14.262 39.303L14.342 39.223C16.928 36.18 26.701 23.854 26.701 13.6C26.701 11.8797 26.3622 10.1762 25.7038 8.58685C25.0455 6.99748 24.0805 5.55335 22.8641 4.3369C21.6477 3.12045 20.2035 2.15551 18.6142 1.49718C17.0248 0.838841 15.3213 0.5 13.601 0.5ZM13.601 17.156C12.7223 17.156 11.8632 16.8954 11.1326 16.4072C10.402 15.919 9.83248 15.2251 9.4962 14.4133C9.15992 13.6014 9.07194 12.7081 9.24337 11.8462C9.4148 10.9844 9.83796 10.1927 10.4593 9.57132C11.0807 8.94996 11.8724 8.52681 12.7342 8.35537C13.5961 8.18394 14.4894 8.27192 15.3013 8.6082C16.1131 8.94448 16.807 9.51395 17.2952 10.2446C17.7834 10.9752 18.044 11.8343 18.044 12.713V12.724C18.0411 13.9005 17.5717 15.0277 16.7388 15.8586C15.9059 16.6894 14.7775 17.156 13.601 17.156Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
             </a>
-
             <a href="why-koba.html" class="button button-primary w-inline-block">
               <div class="button_text">
                 <p class="button_text_content is-1">WHY KOBA</p>
                 <p class="button_text_content is-2">WHY KOBA</p>
               </div>
+              <div class="button_arrow">
+                <div class="button_arrow_icon is-1 w-embed">
+                  <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="button_arrow_icon is-2 w-embed">
+                  <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
             </a>
-
-            <!-- BUY BUTTON -->
-            <div class="button button-primary w-inline-block" style="position: relative; cursor: pointer;"
-              onclick="document.getElementById('buyDropdown').classList.toggle('show')">
+            <div class="button button-primary w-inline-block" style="position: relative; cursor: pointer;" onclick="document.getElementById('buyDropdown').classList.toggle('show')">
               <div class="button_text">
                 <p class="button_text_content is-1">BUY</p>
                 <p class="button_text_content is-2">BUY</p>
               </div>
-
+              <div class="button_arrow">
+                <div class="button_arrow_icon is-1 w-embed">
+                  <svg width="100%" height="100%" viewBox="0 0 11 11" fill="none" xmlns="https://www.w3.org/2000/svg">
+                    <path d="M0.351562 0.5H10.3516M10.3516 0.5V10.5M10.3516 0.5L0.351562 10.5" stroke="white"></path>
+                  </svg>
+                </div>
+                <div class="button_arrow_icon is-2 w-embed">
+                  <svg width="100%" height="100%" viewBox="0 0 11 11" fill="none" xmlns="https://www.w3.org/2000/svg">
+                    <path d="M0.351562 0.5H10.3516M10.3516 0.5V10.5M10.3516 0.5L0.351562 10.5" stroke="white"></path>
+                  </svg>
+                </div>
+              </div>
+              <!-- Dropdown menu -->
               <div id="buyDropdown" class="buy-dropdown">
-                <!-- ✅ STRIPE LINK CONNECTED -->
-                <a href="https://buy.stripe.com/28E4gs2700HUgFRfJY3gk01" target="_blank" rel="noopener">
-                  1 x 350ml – $4.50
-                </a>
-
-                <a href="#">6 x 350ml – $27</a>
-                <a href="#">12 x 350ml – $54</a>
-                <a href="#">24 x 350ml – $108</a>
+                <a href="#">1 x 350ml - $4.50</a>
+                <a href="#">6 x 350ml - $27</a>
+                <a href="#">12 x 350ml - $54</a>
+                <a href="#">24 x 350ml - $108</a>
               </div>
             </div>
-
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 <main class="why-koba">
-  <!-- CONTENT UNCHANGED -->
+  <h1>WHY KOBA</h1>
+  <h2>Fizz that hits different.<br>Sip bold. Feel unstoppable.</h2>
+  <p class="intro-bold">For new, bold flavours you can always depend on. We do different.</p>
+  <p class="intro-bold">
+    KOBA Organics is kombucha that doesn’t play it safe. We craft naturally fermented,
+    probiotic-rich fizz with flavour that actually shows up — not the face-scrunching
+    vinegar punch you get from some other kombuchas.
+  </p>
+  <h2>What makes KOBA… KOBA</h2>
+  <div class="feature-list">
+    <div class="feature-box">
+      <strong class="feature-title">🔥 Bold Flavours, No Compromises</strong>
+      <div class="feature-subtext">Gooseberry sparkle. Pineapple sweetness. Turmeric with attitude.</div>
+    </div>
+    <div class="feature-box">
+      <strong class="feature-title">😌 Smooth, Not Vinegary</strong>
+      <div class="feature-subtext">Bright, refreshing, clean fizz — easy to drink all day.</div>
+    </div>
+    <div class="feature-box">
+      <strong class="feature-title">🌱 Gut-Friendly by Nature</strong>
+      <div class="feature-subtext">Packed with live probiotics from natural fermentation.</div>
+    </div>
+    <div class="feature-box">
+      <strong class="feature-title">🍃 Clean & Organic</strong>
+      <div class="feature-subtext">No added sugar. 100% organic ingredients. Nothing fake.</div>
+    </div>
+  </div>
+  <h3>💬 The KOBA Promise</h3>
+  <p class="promise-bold">
+    We don’t do fake.<br>
+    We don’t do kombucha that tastes like regret.<br>
+    We do bold, balanced, feel-good fizz — every single time.
+  </p>
+  <h3>Nutritional Information</h3>
+  <table class="nutrition-table">
+    <tr>
+      <th></th>
+      <th>Per 100ml</th>
+      <th>Per Serve (350ml)</th>
+    </tr>
+    <tr><td>Energy</td><td>50 kJ</td><td>175 kJ</td></tr>
+    <tr><td>Protein</td><td>&lt;1 g</td><td>&lt;0.35 g</td></tr>
+    <tr><td>Fat, total<br>— saturated</td><td>&lt;1 g<br>— &lt;1 g</td><td>&lt;0.35 g<br>— &lt;0.35 g</td></tr>
+    <tr><td>Carbohydrate<br>— sugars</td><td>2.9 g<br>— 2.9 g</td><td>10 g<br>— 10 g</td></tr>
+    <tr><td>Dietary fibre</td><td>&lt;1 g</td><td>&lt;0.35 g</td></tr>
+    <tr><td>Sodium</td><td>2 mg</td><td>7 mg</td></tr>
+  </table>
 </main>
-
 </body>
 </html>
