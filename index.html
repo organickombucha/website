@@ -37,39 +37,6 @@
     .lenis.lenis-stopped {
       overflow: hidden;
     }
-
-    /* Dropdown styles – only for BUY button (bottom) */
-    .buy-dropdown {
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #FFEEDB;
-      border: 1px solid #E0C9B0;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(120, 64, 1, 0.12);
-      min-width: 220px;
-      z-index: 100;
-      margin-top: 8px;
-      padding: 8px 0;
-      display: none;
-    }
-    .buy-dropdown.show {
-      display: block;
-    }
-    .buy-dropdown a {
-      display: block;
-      padding: 12px 20px;
-      color: #784001;
-      text-decoration: none;
-      font-weight: 500;
-      text-align: left;
-      white-space: nowrap;
-      transition: background 0.2s;
-    }
-    .buy-dropdown a:hover {
-      background: rgba(139, 69, 19, 0.08);
-    }
   </style>
 </head>
 <body>
@@ -254,7 +221,7 @@
                     }
                   </style>
                 </div>
-                <div class="hp_ingredients_container" style="position: relative;">
+                <div class="hp_ingredients_container">
                   <div class="hp_ingredients_item_wrapper">
                     <div class="hp_ingredients_item"><img src="images/Gemini_Generated_Image_p1i7djp1i7djp1i7-1.webp"
                         loading="lazy" id="w-node-f0649657-16c1-e0b8-37b4-0073d9908cde-a62572fa" alt=""
@@ -288,7 +255,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="button button-primary w-inline-block" style="position: relative; cursor: pointer;" onclick="document.getElementById('buyDropdownBottom').classList.toggle('show')">
+                  <a href="#" class="button button-primary w-inline-block">
                     <div class="button_text">
                       <p class="button_text_content is-1">BUY</p>
                       <p class="button_text_content is-2">BUY</p>
@@ -305,14 +272,7 @@
                           </path>
                         </svg></div>
                     </div>
-                    <!-- Dropdown menu for bottom BUY -->
-                    <div id="buyDropdownBottom" class="buy-dropdown">
-                      <a href="#">1 x 350ml - $4.50</a>
-                      <a href="#">6 x 350ml - $27</a>
-                      <a href="#">12 x 350ml - $54</a>
-                      <a href="#">24 x 350ml - $108</a>
-                    </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -535,4 +495,8 @@
     }
   </script>
 </body>
+</html>
+  </script>
+</body>
+
 </html>
