@@ -50,7 +50,7 @@
       font-size: clamp(3.8rem, 9vw, 5.8rem);
       font-weight: 700;
       text-align: center;
-      margin: 0 0 1.5rem;
+      margin: 1.2rem 0 1.5rem; /* ← only change: added 1.2rem top margin to move "WHY KOBA" slightly lower */
       letter-spacing: -0.03em;
       text-transform: uppercase;
       line-height: 1.05;
@@ -169,7 +169,6 @@
               position: relative;
               top: -23px;
             }
-
             /* Force-restore Webflow-style text slide on hover for all three buttons */
             .navbar_cta .button:hover .button_text_content.is-1 {
               transform: translateY(-100%);
@@ -184,7 +183,7 @@
               left: 0;
               transform: translateY(100%);
               opacity: 0;
-              transition: all 0.55s ease; /* <-- made slower here */
+              transition: all 0.55s ease;
             }
             .navbar_cta .button_text {
               position: relative;
