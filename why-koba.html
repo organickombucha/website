@@ -166,16 +166,21 @@
             .navbar_cta {
               display: flex;
               gap: 1rem;
-              align-items: center;          /* vertical center buttons to logo */
-            }
-            .button_text p {
-              line-height: 1;               /* tighten text line-height to match homepage buttons more closely */
-              margin: 0;
+              align-items: center;
             }
             .button {
               display: inline-flex;
-              align-items: center;          /* ensure arrow and text vertically centered inside button */
+              align-items: center;
               justify-content: center;
+            }
+            .button_text,
+            .button_text p {
+              line-height: 1 !important;
+              margin: 0 !important;
+            }
+            .button_arrow {
+              display: flex;
+              align-items: center;
             }
           </style>
           <div class="navbar_cta">
