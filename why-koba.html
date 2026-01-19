@@ -57,7 +57,7 @@
       color: var(--text);
       opacity: 0; /* start hidden */
       transform: translateX(100%); /* start off-screen right */
-      animation: glideIn 1.2s ease-out forwards; /* glide animation */
+      animation: glideIn 2.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; /* smoother + slower glide */
     }
 
     @keyframes glideIn {
