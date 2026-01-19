@@ -169,7 +169,6 @@
               position: relative;
               top: -23px;
             }
-
             /* Force-restore Webflow-style text slide on hover for all three buttons */
             .navbar_cta .button:hover .button_text_content.is-1 {
               transform: translateY(-100%);
@@ -184,11 +183,41 @@
               left: 0;
               transform: translateY(100%);
               opacity: 0;
-              transition: all 0.55s ease; /* <-- made slower here */
+              transition: all 0.55s ease;
             }
             .navbar_cta .button_text {
               position: relative;
               overflow: hidden;
+            }
+
+            /* NEW: Dropdown styles – only for BUY button */
+            .buy-dropdown {
+              position: absolute;
+              top: 100%;
+              right: 0;
+              background: var(--bg);
+              border: 1px solid var(--border);
+              border-radius: 12px;
+              box-shadow: 0 8px 20px rgba(120, 64, 1, 0.12);
+              min-width: 220px;
+              z-index: 100;
+              margin-top: 8px;
+              padding: 8px 0;
+              display: none;
+            }
+            .buy-dropdown.show {
+              display: block;
+            }
+            .buy-dropdown a {
+              display: block;
+              padding: 12px 20px;
+              color: var(--text);
+              text-decoration: none;
+              font-weight: 500;
+              transition: background 0.2s;
+            }
+            .buy-dropdown a:hover {
+              background: rgba(139, 69, 19, 0.08);
             }
           </style>
           <div class="navbar_cta">
@@ -229,7 +258,7 @@
                 </div>
               </div>
             </a>
-            <a href="#" class="button button-primary w-inline-block">
+            <div class="button button-primary w-inline-block" style="position: relative; cursor: pointer;" onclick="document.getElementById('buyDropdown').classList.toggle('show')">
               <div class="button_text">
                 <p class="button_text_content is-1">BUY</p>
                 <p class="button_text_content is-2">BUY</p>
@@ -246,7 +275,14 @@
                   </svg>
                 </div>
               </div>
-            </a>
+              <!-- Dropdown menu (hidden by default) -->
+              <div id="buyDropdown" class="buy-dropdown">
+                <a href="#">1 x 350ml - $4.50</a>
+                <a href="#">6 x 350ml - $27</a>
+                <a href="#">12 x 350ml - $54</a>
+                <a href="#">24 x 350ml - $108</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
