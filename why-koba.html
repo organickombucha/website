@@ -146,23 +146,6 @@
       .feature-title { font-size: 2.2rem; }
       .intro-bold, .feature-subtext, .promise-bold { font-size: 1.3rem; }
     }
-
-    /* Wave styles - exact from homepage */
-    .wave {
-      width: 200vw;
-      transform: translateX(0);
-      transition: transform 0.1s linear;
-      will-change: transform;
-      flex-shrink: 0;
-    }
-    .wave.is-2 {
-      margin-left: -3em;
-    }
-    @media screen and (max-width: 478px) {
-      .wave {
-        height: 70px;
-      }
-    }
   </style>
 </head>
 <body>
@@ -218,8 +201,8 @@
               position: absolute;
               top: 100%;
               right: 0;
-              background: var(--bg);
-              border: 1px solid var(--border);
+              background: #FFEEDB;
+              border: 1px solid #E0C9B0;
               border-radius: 12px;
               box-shadow: 0 8px 20px rgba(120, 64, 1, 0.12);
               min-width: 220px;
@@ -234,7 +217,7 @@
             .buy-dropdown a {
               display: block;
               padding: 12px 20px;
-              color: var(--text);
+              color: #784001;
               text-decoration: none;
               font-weight: 500;
               text-align: left;
@@ -246,7 +229,6 @@
             }
           </style>
           <div class="navbar_cta">
-            <!-- ... (navbar buttons unchanged) ... -->
             <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x6ad65cbcdbcb5931:0xd2612d9bb907481e?entry=s&sa=X&ved=2ahUKEwjW_Ynp6b6RAxX9klYBHXMlMgsQ4kB6BAgUEAA&hl=en"
                class="button button-primary hide-mobile w-inline-block">
               <div class="button_text">
@@ -365,9 +347,25 @@
   </table>
 </main>
 
-<!-- Footer - structure & order matched exactly to homepage -->
 <div class="footer">
   <div class="footer_wave w-embed">
+    <style>
+      .wave {
+        width: 200vw;
+        transform: translateX(0);
+        transition: transform 0.1s linear;
+        will-change: transform;
+        flex-shrink: 0;
+      }
+      .wave.is-2 {
+        margin-left: -3em;
+      }
+      @media screen and (max-width: 478px) {
+        .wave {
+          height: 70px;
+        }
+      }
+    </style>
     <svg class="wave" height="158" viewBox="0 0 4084 158" fill="none" preserveAspectRatio="none"
          xmlns="http://www.w3.org/2000/svg">
       <path
@@ -375,23 +373,20 @@
         fill="#246A1E"></path>
     </svg>
   </div>
-
   <div class="footer_container">
     <div class="footer_top">
       <div class="footer_left">
         <div class="footer_left_heading">
           <p class="heading-style-h5 uppercase text_white">Say Hi! We're friendlier than your gut bacteria
             (unless you're a bad probiotic).</p>
-          <a href="mailto:info@kobaorganics.com.au" style="margin-top: 0.8rem; display: block;">
-            <h2 class="heading-style-h4 text_lightcream uppercase">info@kobaorganics.com.au</h2>
-          </a>
+          <a href="mailto:info@kobaorganics.com.au" style="margin-top: 0.8rem; display: block;"><h2 class="heading-style-h4 text_lightcream uppercase">info@kobaorganics.com.au</h2></a>
         </div>
         <div class="w-form">
           <form id="email-form" name="email-form" data-name="Email Form" redirect="/" data-redirect="/"
-            action="https://gmail.us15.list-manage.com/subscribe/post-json?u=0dd3c18d0ddb06692e5728f6e&id=55d2d6010e&f_id=0081afe0f0&c=mcCallback"
-            method="post" class="form" data-wf-page-id="692ec3f6ba824963a62572fa"
-            data-wf-element-id="0a32d371-2247-721a-d353-6ca5564a6594">
-            <input class="footer_input w-input" maxlength="256" name="EMAIL" data-name="EMAIL" placeholder="ENTER EMAIL" type="email" id="EMAIL">
+                action="https://gmail.us15.list-manage.com/subscribe/post-json?u=0dd3c18d0ddb06692e5728f6e&id=55d2d6010e&f_id=0081afe0f0&c=mcCallback"
+                method="post" class="form" data-wf-page-id="692ec3f6ba824963a62572fa"
+                data-wf-element-id="0a32d371-2247-721a-d353-6ca5564a6594"><input class="footer_input w-input"
+                  maxlength="256" name="EMAIL" data-name="EMAIL" placeholder="ENTER EMAIL" type="email" id="EMAIL">
             <a id="form-submit" href="#" class="button button-primary footer_button_submit w-inline-block">
               <div class="button_text">
                 <p class="button_text_content is-1">SUBMIT</p>
@@ -405,10 +400,12 @@
         <div class="footer_link_wrapper">
           <h5 class="heading-style-h5 uppercase text_white">Socials</h5>
           <div class="footer_link">
-            <a href="https://www.tiktok.com/@koba.organics?_r=1&_t=ZS-91wuPmTjsN0" class="footer_button w-inline-block">
+            <a href="https://www.tiktok.com/@koba.organics?_r=1&_t=ZS-91wuPmTjsN0"
+              class="footer_button w-inline-block">
               <h4 class="heading-style-h4 footer_link_text">Tiktok</h4>
             </a>
-            <a href="https://www.instagram.com/koba.organics?igsh=Ym5ucG4yNWk2emky&utm_source=qr" class="footer_button w-inline-block">
+            <a href="https://www.instagram.com/koba.organics?igsh=Ym5ucG4yNWk2emky&utm_source=qr"
+              class="footer_button w-inline-block">
               <h4 class="heading-style-h4 footer_link_text">Instagram</h4>
             </a>
           </div>
@@ -427,33 +424,34 @@
       </div>
     </div>
     <div class="footer_bottom">
-      <h2 class="footer_big_text"><span class="footer_logo_main">KOBA</span><span class="footer_logo_sub">ORGANICS</span></h2>
+      <h2 class="footer_big_text"><span class="footer_logo_main">KOBA</span><span
+          class="footer_logo_sub">ORGANICS</span></h2>
     </div>
   </div>
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const footer = document.querySelector(".footer");
-  const wave = document.querySelector(".wave");
-  function animateWave() {
-    const rect = footer.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-    let progress = 1 - rect.top / windowHeight;
-    progress = Math.max(0, Math.min(1, progress));
-    let maxMove = -30;
-    if (window.innerWidth < 478) {
-      const start = -30;
-      const end = -40;
-      const mobileMove = start + (progress * (end - start));
-      wave.style.transform = `translateX(${mobileMove}%)`;
-      return;
+  document.addEventListener("DOMContentLoaded", () => {
+    const footer = document.querySelector(".footer");
+    const wave = document.querySelector(".wave");
+    function animateWave() {
+      const rect = footer.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      let progress = 1 - rect.top / windowHeight;
+      progress = Math.max(0, Math.min(1, progress));
+      let maxMove = -30;
+      if (window.innerWidth < 478) {
+        const start = -30;
+        const end = -40;
+        const mobileMove = start + (progress * (end - start));
+        wave.style.transform = `translateX(${mobileMove}%)`;
+        return;
+      }
+      wave.style.transform = `translateX(${progress * maxMove}%)`;
     }
-    wave.style.transform = `translateX(${progress * maxMove}%)`;
-  }
-  window.addEventListener("scroll", animateWave);
-  animateWave();
-});
+    window.addEventListener("scroll", animateWave);
+    animateWave();
+  });
 </script>
 
 <script>
@@ -464,7 +462,12 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Please enter an email");
       return;
     }
-    const url = "https://gmail.us15.list-manage.com/subscribe/post-json?u=0dd3c18d0ddb06692e5728f6e&id=55d2d6010e&f_id=0081afe0f0&c=mcCallback&EMAIL=" + encodeURIComponent(email);
+    const url = "https://gmail.us15.list-manage.com/subscribe/post-json" +
+      "?u=0dd3c18d0ddb06692e5728f6e" +
+      "&id=55d2d6010e" +
+      "&f_id=0081afe0f0" +
+      "&c=mcCallback" +
+      "&EMAIL=" + encodeURIComponent(email);
     const oldScript = document.getElementById("mc-script");
     if (oldScript) oldScript.remove();
     const script = document.createElement("script");
@@ -472,12 +475,13 @@ document.addEventListener("DOMContentLoaded", () => {
     script.src = url;
     document.body.appendChild(script);
   });
-
   function mcCallback(response) {
     if (response.result === "success") {
+      console.log("Success:", response.msg);
       alert("🎉 Success! You are subscribed.");
       document.getElementById("EMAIL").value = "";
     } else {
+      console.log("Error:", response.msg);
       alert("❌ Error: " + response.msg);
     }
   }
