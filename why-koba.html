@@ -55,9 +55,9 @@
       text-transform: uppercase;
       line-height: 1.05;
       color: var(--text);
-      opacity: 0; /* start hidden */
-      transform: translateX(100%); /* start off-screen right */
-      animation: glideIn 2.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; /* smoother + slower glide */
+      opacity: 0;
+      transform: translateX(100%);
+      animation: glideIn 2.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
     }
     @keyframes glideIn {
       to {
@@ -147,11 +147,7 @@
       .intro-bold, .feature-subtext, .promise-bold { font-size: 1.3rem; }
     }
 
-    /* Wave styles copied from homepage */
-    .footer_wave {
-      overflow: hidden;
-      margin-top: auto;
-    }
+    /* Wave styles - exact from homepage */
     .wave {
       width: 200vw;
       transform: translateX(0);
@@ -250,6 +246,7 @@
             }
           </style>
           <div class="navbar_cta">
+            <!-- ... (navbar buttons unchanged) ... -->
             <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x6ad65cbcdbcb5931:0xd2612d9bb907481e?entry=s&sa=X&ved=2ahUKEwjW_Ynp6b6RAxX9klYBHXMlMgsQ4kB6BAgUEAA&hl=en"
                class="button button-primary hide-mobile w-inline-block">
               <div class="button_text">
@@ -294,12 +291,12 @@
               </div>
               <div class="button_arrow">
                 <div class="button_arrow_icon is-1 w-embed">
-                  <svg width="100%" height="100%" viewBox="0 0 11 11" fill="none" xmlns="https://www.w3.org/2000/svg">
+                  <svg width="100%" height="100%" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.351562 0.5H10.3516M10.3516 0.5V10.5M10.3516 0.5L0.351562 10.5" stroke="white"></path>
                   </svg>
                 </div>
                 <div class="button_arrow_icon is-2 w-embed">
-                  <svg width="100%" height="100%" viewBox="0 0 11 11" fill="none" xmlns="https://www.w3.org/2000/svg">
+                  <svg width="100%" height="100%" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.351562 0.5H10.3516M10.3516 0.5V10.5M10.3516 0.5L0.351562 10.5" stroke="white"></path>
                   </svg>
                 </div>
@@ -368,6 +365,7 @@
   </table>
 </main>
 
+<!-- Footer - structure & order matched exactly to homepage -->
 <div class="footer">
   <div class="footer_wave w-embed">
     <svg class="wave" height="158" viewBox="0 0 4084 158" fill="none" preserveAspectRatio="none"
@@ -392,8 +390,8 @@
           <form id="email-form" name="email-form" data-name="Email Form" redirect="/" data-redirect="/"
             action="https://gmail.us15.list-manage.com/subscribe/post-json?u=0dd3c18d0ddb06692e5728f6e&id=55d2d6010e&f_id=0081afe0f0&c=mcCallback"
             method="post" class="form" data-wf-page-id="692ec3f6ba824963a62572fa"
-            data-wf-element-id="0a32d371-2247-721a-d353-6ca5564a6594"><input class="footer_input w-input"
-              maxlength="256" name="EMAIL" data-name="EMAIL" placeholder="ENTER EMAIL" type="email" id="EMAIL">
+            data-wf-element-id="0a32d371-2247-721a-d353-6ca5564a6594">
+            <input class="footer_input w-input" maxlength="256" name="EMAIL" data-name="EMAIL" placeholder="ENTER EMAIL" type="email" id="EMAIL">
             <a id="form-submit" href="#" class="button button-primary footer_button_submit w-inline-block">
               <div class="button_text">
                 <p class="button_text_content is-1">SUBMIT</p>
@@ -407,12 +405,10 @@
         <div class="footer_link_wrapper">
           <h5 class="heading-style-h5 uppercase text_white">Socials</h5>
           <div class="footer_link">
-            <a href="https://www.tiktok.com/@koba.organics?_r=1&_t=ZS-91wuPmTjsN0"
-              class="footer_button w-inline-block">
+            <a href="https://www.tiktok.com/@koba.organics?_r=1&_t=ZS-91wuPmTjsN0" class="footer_button w-inline-block">
               <h4 class="heading-style-h4 footer_link_text">Tiktok</h4>
             </a>
-            <a href="https://www.instagram.com/koba.organics?igsh=Ym5ucG4yNWk2emky&utm_source=qr"
-              class="footer_button w-inline-block">
+            <a href="https://www.instagram.com/koba.organics?igsh=Ym5ucG4yNWk2emky&utm_source=qr" class="footer_button w-inline-block">
               <h4 class="heading-style-h4 footer_link_text">Instagram</h4>
             </a>
           </div>
@@ -430,16 +426,13 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- Moved to very bottom, exactly like homepage structure -->
-  <div class="footer_bottom">
-    <h2 class="footer_big_text"><span class="footer_logo_main">KOBA</span><span class="footer_logo_sub">ORGANICS</span></h2>
+    <div class="footer_bottom">
+      <h2 class="footer_big_text"><span class="footer_logo_main">KOBA</span><span class="footer_logo_sub">ORGANICS</span></h2>
+    </div>
   </div>
 </div>
 
 <script>
-// Wave animation script from homepage
 document.addEventListener("DOMContentLoaded", () => {
   const footer = document.querySelector(".footer");
   const wave = document.querySelector(".wave");
@@ -471,12 +464,7 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Please enter an email");
       return;
     }
-    const url = "https://gmail.us15.list-manage.com/subscribe/post-json" +
-      "?u=0dd3c18d0ddb06692e5728f6e" +
-      "&id=55d2d6010e" +
-      "&f_id=0081afe0f0" +
-      "&c=mcCallback" +
-      "&EMAIL=" + encodeURIComponent(email);
+    const url = "https://gmail.us15.list-manage.com/subscribe/post-json?u=0dd3c18d0ddb06692e5728f6e&id=55d2d6010e&f_id=0081afe0f0&c=mcCallback&EMAIL=" + encodeURIComponent(email);
     const oldScript = document.getElementById("mc-script");
     if (oldScript) oldScript.remove();
     const script = document.createElement("script");
@@ -484,13 +472,12 @@ document.addEventListener("DOMContentLoaded", () => {
     script.src = url;
     document.body.appendChild(script);
   });
+
   function mcCallback(response) {
     if (response.result === "success") {
-      console.log("Success:", response.msg);
       alert("🎉 Success! You are subscribed.");
       document.getElementById("EMAIL").value = "";
     } else {
-      console.log("Error:", response.msg);
       alert("❌ Error: " + response.msg);
     }
   }
