@@ -378,14 +378,15 @@
     </svg>
   </div>
 
-  <!-- Exact same footer content as homepage, placed on top of the wave -->
   <div class="footer_container">
     <div class="footer_top">
       <div class="footer_left">
         <div class="footer_left_heading">
           <p class="heading-style-h5 uppercase text_white">Say Hi! We're friendlier than your gut bacteria
             (unless you're a bad probiotic).</p>
-          <a href="mailto:info@kobaorganics.com.au"><h2 class="heading-style-h4 text_lightcream uppercase">info@kobaorganics.com.au</h2></a>
+          <a href="mailto:info@kobaorganics.com.au" style="margin-top: 0.8rem; display: block;">
+            <h2 class="heading-style-h4 text_lightcream uppercase">info@kobaorganics.com.au</h2>
+          </a>
         </div>
         <div class="w-form">
           <form id="email-form" name="email-form" data-name="Email Form" redirect="/" data-redirect="/"
@@ -429,10 +430,11 @@
         </div>
       </div>
     </div>
-    <div class="footer_bottom">
-      <h2 class="footer_big_text"><span class="footer_logo_main">KOBA</span><span
-          class="footer_logo_sub">ORGANICS</span></h2>
-    </div>
+  </div>
+
+  <!-- Moved to very bottom, exactly like homepage structure -->
+  <div class="footer_bottom">
+    <h2 class="footer_big_text"><span class="footer_logo_main">KOBA</span><span class="footer_logo_sub">ORGANICS</span></h2>
   </div>
 </div>
 
@@ -461,7 +463,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-<!-- Mailchimp form submit script (copied from homepage) -->
 <script>
   document.getElementById("form-submit").addEventListener("click", function (e) {
     e.preventDefault();
