@@ -147,9 +147,7 @@
       .intro-bold, .feature-subtext, .promise-bold { font-size: 1.3rem; }
     }
 
-    /* ────────────────────────────────────────────────
-       Wave styles copied exactly from homepage footer
-    ──────────────────────────────────────────────── */
+    /* Wave styles copied from homepage */
     .footer_wave {
       overflow: hidden;
       margin-top: auto;
@@ -201,7 +199,6 @@
               position: relative;
               top: -23px;
             }
-            /* Force-restore Webflow-style text slide on hover for all three buttons */
             .navbar_cta .button:hover .button_text_content.is-1 {
               transform: translateY(-100%);
               opacity: 0;
@@ -221,7 +218,6 @@
               position: relative;
               overflow: hidden;
             }
-            /* Dropdown styles – only for BUY button */
             .buy-dropdown {
               position: absolute;
               top: 100%;
@@ -308,7 +304,6 @@
                   </svg>
                 </div>
               </div>
-              <!-- Dropdown menu -->
               <div id="buyDropdown" class="buy-dropdown">
                 <a href="https://buy.stripe.com/28E4gs2700HUgFRfJY3gk01">1 x 350ml - $4.50</a>
                 <a href="https://buy.stripe.com/7sY4gs9zsfCO89l55k3gk02">6 x 350ml - $27</a>
@@ -373,9 +368,6 @@
   </table>
 </main>
 
-<!-- ────────────────────────────────────────────────
-     Footer wave copied exactly from homepage
-  ──────────────────────────────────────────────── -->
 <div class="footer">
   <div class="footer_wave w-embed">
     <svg class="wave" height="158" viewBox="0 0 4084 158" fill="none" preserveAspectRatio="none"
@@ -385,10 +377,67 @@
         fill="#246A1E"></path>
     </svg>
   </div>
+
+  <!-- Exact same footer content as homepage, placed on top of the wave -->
+  <div class="footer_container">
+    <div class="footer_top">
+      <div class="footer_left">
+        <div class="footer_left_heading">
+          <p class="heading-style-h5 uppercase text_white">Say Hi! We're friendlier than your gut bacteria
+            (unless you're a bad probiotic).</p>
+          <a href="mailto:info@kobaorganics.com.au"><h2 class="heading-style-h4 text_lightcream uppercase">info@kobaorganics.com.au</h2></a>
+        </div>
+        <div class="w-form">
+          <form id="email-form" name="email-form" data-name="Email Form" redirect="/" data-redirect="/"
+            action="https://gmail.us15.list-manage.com/subscribe/post-json?u=0dd3c18d0ddb06692e5728f6e&id=55d2d6010e&f_id=0081afe0f0&c=mcCallback"
+            method="post" class="form" data-wf-page-id="692ec3f6ba824963a62572fa"
+            data-wf-element-id="0a32d371-2247-721a-d353-6ca5564a6594"><input class="footer_input w-input"
+              maxlength="256" name="EMAIL" data-name="EMAIL" placeholder="ENTER EMAIL" type="email" id="EMAIL">
+            <a id="form-submit" href="#" class="button button-primary footer_button_submit w-inline-block">
+              <div class="button_text">
+                <p class="button_text_content is-1">SUBMIT</p>
+                <p class="button_text_content is-2">SUBMIT</p>
+              </div>
+            </a>
+          </form>
+        </div>
+      </div>
+      <div class="footer_right">
+        <div class="footer_link_wrapper">
+          <h5 class="heading-style-h5 uppercase text_white">Socials</h5>
+          <div class="footer_link">
+            <a href="https://www.tiktok.com/@koba.organics?_r=1&_t=ZS-91wuPmTjsN0"
+              class="footer_button w-inline-block">
+              <h4 class="heading-style-h4 footer_link_text">Tiktok</h4>
+            </a>
+            <a href="https://www.instagram.com/koba.organics?igsh=Ym5ucG4yNWk2emky&utm_source=qr"
+              class="footer_button w-inline-block">
+              <h4 class="heading-style-h4 footer_link_text">Instagram</h4>
+            </a>
+          </div>
+        </div>
+        <div class="footer_link_wrapper">
+          <h5 class="heading-style-h5 uppercase text_white">Find and Buy</h5>
+          <div class="footer_link">
+            <a href="#" class="footer_button w-inline-block">
+              <h4 class="heading-style-h4 footer_link_text">Amazon</h4>
+            </a>
+            <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x6ad65cbcdbcb5931:0xd2612d9bb907481e?entry=s&sa=X&ved=2ahUKEwjW_Ynp6b6RAxX9klYBHXMlMgsQ4kB6BAgUEAA&hl=en" class="footer_button w-inline-block">
+              <h4 class="heading-style-h4 footer_link_text">Stockist</h4>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <h2 class="footer_big_text"><span class="footer_logo_main">KOBA</span><span
+          class="footer_logo_sub">ORGANICS</span></h2>
+    </div>
+  </div>
 </div>
 
 <script>
-// Wave animation script copied exactly from homepage
+// Wave animation script from homepage
 document.addEventListener("DOMContentLoaded", () => {
   const footer = document.querySelector(".footer");
   const wave = document.querySelector(".wave");
@@ -397,9 +446,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const windowHeight = window.innerHeight;
     let progress = 1 - rect.top / windowHeight;
     progress = Math.max(0, Math.min(1, progress));
-    // Desktop / Tablet movement
     let maxMove = -30;
-    // On screens < 478px: only move from -30 to -40
     if (window.innerWidth < 478) {
       const start = -30;
       const end = -40;
@@ -407,12 +454,45 @@ document.addEventListener("DOMContentLoaded", () => {
       wave.style.transform = `translateX(${mobileMove}%)`;
       return;
     }
-    // Default movement
     wave.style.transform = `translateX(${progress * maxMove}%)`;
   }
   window.addEventListener("scroll", animateWave);
   animateWave();
 });
+</script>
+
+<!-- Mailchimp form submit script (copied from homepage) -->
+<script>
+  document.getElementById("form-submit").addEventListener("click", function (e) {
+    e.preventDefault();
+    const email = document.getElementById("EMAIL").value.trim();
+    if (!email) {
+      alert("Please enter an email");
+      return;
+    }
+    const url = "https://gmail.us15.list-manage.com/subscribe/post-json" +
+      "?u=0dd3c18d0ddb06692e5728f6e" +
+      "&id=55d2d6010e" +
+      "&f_id=0081afe0f0" +
+      "&c=mcCallback" +
+      "&EMAIL=" + encodeURIComponent(email);
+    const oldScript = document.getElementById("mc-script");
+    if (oldScript) oldScript.remove();
+    const script = document.createElement("script");
+    script.id = "mc-script";
+    script.src = url;
+    document.body.appendChild(script);
+  });
+  function mcCallback(response) {
+    if (response.result === "success") {
+      console.log("Success:", response.msg);
+      alert("🎉 Success! You are subscribed.");
+      document.getElementById("EMAIL").value = "";
+    } else {
+      console.log("Error:", response.msg);
+      alert("❌ Error: " + response.msg);
+    }
+  }
 </script>
 
 </body>
