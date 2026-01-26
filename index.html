@@ -69,41 +69,20 @@
       background: rgba(139, 69, 19, 0.08);
     }
 
-    /* MOBILE FIX: Match width + height + keep text duplication working */
+    /* MOBILE-ONLY: Make BUY button vertically taller to match WHY KOBA height */
     @media screen and (max-width: 767px) {
-      .navbar_cta a.button.button-primary[href="why-koba.html"] {
-        padding: 0.5em 0.9em !important;             /* smaller horizontal padding → narrower like BUY */
-        font-size: 0.95rem !important;
-        line-height: 1.1 !important;
-        min-height: 42px !important;
-        height: auto !important;
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        box-sizing: border-box !important;
+      .navbar_cta .button.button-primary[onclick*="buyDropdown"] {
+        padding-top: 0.75em    !important;
+        padding-bottom: 0.75em !important;
+        min-height: 52px       !important;
+        align-items: center    !important;
+        display: inline-flex   !important;
       }
 
-      .navbar_cta a.button.button-primary[href="why-koba.html"] .button_text {
-        height: auto !important;
-        line-height: 1.1 !important;
-      }
-
-      /* Keep the original duplication/animation effect intact */
-      .navbar_cta a.button.button-primary[href="why-koba.html"] .button_text_content.is-1,
-      .navbar_cta a.button.button-primary[href="why-koba.html"] .button_text_content.is-2 {
-        font-size: 0.95rem !important;
-        line-height: 1.1 !important;
-        margin: 0 !important;
-        padding: 0 !important;
-      }
-
-      .navbar_cta a.button.button-primary[href="why-koba.html"] .button_arrow_icon {
-        width: 0.7em !important;
-        height: 0.7em !important;
-      }
-
-      .navbar_cta {
-        gap: 0.7rem !important;
+      /* Keep text layers centered vertically */
+      .navbar_cta .button.button-primary[onclick*="buyDropdown"] .button_text_content.is-1,
+      .navbar_cta .button.button-primary[onclick*="buyDropdown"] .button_text_content.is-2 {
+        line-height: 1.15 !important;
       }
     }
   </style>
@@ -115,15 +94,15 @@
         <div class="container-large">
           <div class="navbar_container">
             <div class="navbar_logo_wrapper">
-              <div class="logo_wrapper">
-                <a href="/" aria-label="Go to homepage">
-                  <h1 class="logo">
-                    <span class="logo_main">KOBA</span>
-                    <span class="logo_tagline">ORGANICS</span>
-                  </h1>
-                </a>
-              </div>
-            </div>
+  <div class="logo_wrapper">
+    <a href="/" aria-label="Go to homepage">
+      <h1 class="logo">
+        <span class="logo_main">KOBA</span>
+        <span class="logo_tagline">ORGANICS</span>
+      </h1>
+    </a>
+  </div>
+</div>
             <style>
               .navbar_cta {
                 display: flex;
@@ -153,39 +132,39 @@
                     </svg></div>
                 </div>
               </a>
-              <a href="why-koba.html" class="button button-primary w-inline-block">
-                <div class="button_text">
-                  <p class="button_text_content is-1">WHY KOBA</p>
-                  <p class="button_text_content is-2">WHY KOBA</p>
-                </div>
-                <div class="button_arrow">
-                  <div class="button_arrow_icon is-1 w-embed">
-                    <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                      <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </div>
-                  <div class="button_arrow_icon is-2 w-embed">
-                    <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                      <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </div>
-                </div>
-              </a>
+            <a href="why-koba.html" class="button button-primary w-inline-block">
+  <div class="button_text">
+    <p class="button_text_content is-1">WHY KOBA</p>
+    <p class="button_text_content is-2">WHY KOBA</p>
+  </div>
+  <div class="button_arrow">
+    <div class="button_arrow_icon is-1 w-embed">
+      <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"
+           xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div class="button_arrow_icon is-2 w-embed">
+      <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"
+           xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 6L9 17L4 12" stroke="white" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+</a>
               <div class="button button-primary w-inline-block" style="position: relative; cursor: pointer;" onclick="document.getElementById('buyDropdown').classList.toggle('show')">
                 <div class="button_text">
                   <p class="button_text_content is-1">BUY</p>
                   <p class="button_text_content is-2">BUY</p>
                 </div>
                 <div class="button_arrow">
-                  <div class="button_arrow_icon is-1 w-embed"><svg width="100%" height="100%" viewBox="0 0 11 11"
+                  <div class="button_arrow_icon is-1 w-embed"><svg width="100%" height="100%" viewbox="0 0 11 11"
                       fill="none" xmlns="https://www.w3.org/2000/svg">
                       <path d="M0.351562 0.5H10.3516M10.3516 0.5V10.5M10.3516 0.5L0.351562 10.5" stroke="white"></path>
                     </svg></div>
-                  <div class="button_arrow_icon is-2 w-embed"><svg width="100%" height="100%" viewBox="0 0 11 11"
+                  <div class="button_arrow_icon is-2 w-embed"><svg width="100%" height="100%" viewbox="0 0 11 11"
                       fill="none" xmlns="https://www.w3.org/2000/svg">
                       <path d="M0.351562 0.5H10.3516M10.3516 0.5V10.5M10.3516 0.5L0.351562 10.5" stroke="white"></path>
                     </svg></div>
