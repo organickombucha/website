@@ -180,15 +180,15 @@
       }
     }
 
-    /* FINAL EMAIL FORM MATCH – EXACT PIXEL ALIGNMENT WITH HOMEPAGE */
+    /* FINAL EMAIL FORM MATCH – EXACT PIXEL ALIGNMENT WITH HOMEPAGE (NO GREEN STRETCH) */
     .footer_left .form {
       width: 100% !important;
-      max-width: 390px !important;           /* tuned to match homepage width exactly */
+      max-width: 390px !important;           /* tuned narrower to match homepage exactly without stretching green button area */
       position: relative !important;
     }
     .footer_input {
       width: 100% !important;
-      padding-right: 7.8rem !important;      /* precise padding for button placement */
+      padding-right: 7.2rem !important;      /* precise padding so button fits perfectly without overflow */
       font-size: 1rem !important;
       font-weight: 700 !important;
       height: 46px !important;
@@ -202,7 +202,7 @@
       top: 0.5em !important;
       right: 0.5em !important;
       bottom: 0.5em !important;
-      width: 6.8rem !important;              /* button width matches homepage exactly */
+      width: 6.2rem !important;              /* button width matches homepage's compact green pill exactly */
       font-size: 0.875rem !important;
       padding: 0 !important;
       border-radius: 9999px !important;
