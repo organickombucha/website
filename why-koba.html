@@ -149,20 +149,30 @@
 
     /* FINAL FOOTER ALIGNMENT FIX – 2-line wrap + exact spacing & width like homepage */
     .footer_left_heading {
-      max-width: 320px !important;      /* forces same width as homepage → 2-line wrap */
+      max-width: 320px !important;
       width: 100% !important;
-      gap: 0.6em !important;            /* exact vertical gap between tagline and email */
+      gap: 0.6em !important;
     }
     .footer_left_heading p.heading-style-h5 {
       margin: 0 !important;
       padding: 0 !important;
-      line-height: 1.45 !important;     /* tight but natural line spacing for 2 lines */
+      line-height: 1.45 !important;
       hyphens: auto;
       word-break: normal;
     }
     .footer_left_heading h2.heading-style-h4 {
       margin: 0 !important;
       padding: 0 !important;
+    }
+
+    /* Move "KOBA ORGANICS" slightly up (closer to content above) */
+    .footer_bottom {
+      margin-bottom: -1.5rem !important;   /* pulls the big text up – adjust -1rem / -2rem if you want more/less */
+    }
+    @media (max-width: 767px) {
+      .footer_bottom {
+        margin-bottom: -1rem !important;   /* smaller lift on mobile */
+      }
     }
   </style>
 </head>
