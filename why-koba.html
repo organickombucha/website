@@ -99,7 +99,7 @@
     .feature-list {
       display: grid;
       gap: 2.2rem;
-      margin: 0.8rem 0 4rem;               /* boxes very high up */
+      margin: 0.5rem 0 4rem;               /* boxes very high */
     }
     .feature-box {
       background-color: var(--box-bg);
@@ -179,26 +179,26 @@
       }
     }
 
-    /* Image extremely high – negative margin to pull it up into/very close behind the heading text */
+    /* Image pulled MUCH higher – strong negative margin to overlap behind the heading text */
     .hp_abt_img {
       display: block;
       width: 100%;
       max-width: 1100px;
       height: auto;
-      margin: -1.5rem auto 2rem;           /* negative top margin → image pulled much higher, right behind / overlapping slightly with heading */
+      margin: -3rem auto 2rem;             /* much higher – strong negative top margin */
       position: relative;
     }
 
     @media (min-width: 768px) {
       .hp_abt_img {
         max-width: 1200px;
-        margin: -1.8rem auto 2.5rem;       /* even more aggressive on desktop */
+        margin: -3.5rem auto 2.5rem;       /* even more on desktop */
       }
     }
 
     @media (max-width: 600px) {
       .hp_abt_img {
-        margin: -1.2rem auto 1.8rem;
+        margin: -2.5rem auto 1.8rem;
       }
     }
   </style>
