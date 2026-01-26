@@ -186,6 +186,8 @@
       height: auto;
       margin: -0.5rem 0 2rem -4%;
       position: relative;
+      transform-origin: top center;
+      animation: swing 8s ease-in-out infinite;
     }
     @media (min-width: 768px) {
       .hp_abt_img {
@@ -199,6 +201,11 @@
         margin: -2.8rem auto 1.8rem;
       }
     }
+    @keyframes swing {
+  0%   { transform: rotate(-3deg); }
+  50%  { transform: rotate(3deg); }
+  100% { transform: rotate(-3deg); }
+}
   </style>
 </head>
 <body>
