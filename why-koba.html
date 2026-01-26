@@ -178,7 +178,7 @@
         padding-bottom: 8rem !important;
       }
     }
-    /* Image very high + very slightly to the left – position unchanged, only swing animation added */
+    /* Image very high + very slightly to the left */
     .hp_abt_img {
       display: block;
       width: 100%;
@@ -186,23 +186,13 @@
       height: auto;
       margin: -0.5rem 0 2rem -4%;
       position: relative;
-      transform-origin: top center;
-      animation: swing 8s ease-in-out infinite;
     }
-
-    @keyframes swing {
-      0%   { transform: rotate(-3deg); }
-      50%  { transform: rotate(3deg); }
-      100% { transform: rotate(-3deg); }
-    }
-
     @media (min-width: 768px) {
       .hp_abt_img {
         max-width: 90%;
         margin: -4rem 0 2.5rem -5%;
       }
     }
-
     @media (max-width: 600px) {
       .hp_abt_img {
         max-width: 100%;
