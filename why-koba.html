@@ -235,7 +235,7 @@
     }
     .buy-dropdown a:hover { background: rgba(139, 69, 19, 0.08); }
 
-    /* MOBILE-ONLY: Hide icons + make BUY wider + vertical adjustment */
+    /* MOBILE-ONLY: Hide icons + make BUY wider + vertical adjustment + more space below heading */
     @media screen and (max-width: 767px) {
       /* Hide icons next to WHY KOBA and BUY */
       .navbar_cta a[href="why-koba.html"] .button_arrow,
@@ -267,9 +267,9 @@
         top: -12px !important;
       }
 
-      /* NEW: Add space between h2 heading and first feature box on mobile only */
+      /* Add more space between h2 heading and first feature box on mobile only */
       .feature-list {
-        margin-top: -8rem !important; /* ← less negative than -10.5rem, adds space */
+        margin-top: -6rem !important; /* ← moved from -8rem to -6rem → more visible space */
       }
     }
   </style>
