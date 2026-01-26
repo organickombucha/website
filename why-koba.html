@@ -147,20 +147,23 @@
       .intro-bold, .feature-subtext, .promise-bold { font-size: 1.3rem; }
     }
 
-    /* FINAL FOOTER FIX - overrides to match homepage spacing exactly */
+    /* FINAL ALIGNMENT FIX - force homepage footer spacing */
     .footer_left_heading {
-      gap: 0.4rem !important;           /* tightens flex/grid gap to homepage level */
+      gap: 0.35rem !important;          /* exact match to homepage grid-row-gap */
     }
     .footer_left_heading p.heading-style-h5 {
       margin: 0 !important;
       padding: 0 !important;
-      line-height: 1.4 !important;      /* matches homepage effective line-height */
+      line-height: 1.4 !important;      /* overrides body 1.68 → matches homepage 1.4 */
       font-size: 1rem !important;
+      font-weight: 500 !important;
     }
     .footer_left_heading h2.heading-style-h4 {
       margin: 0 !important;
       padding: 0 !important;
       line-height: 1 !important;
+      font-size: 1.25rem !important;
+      font-weight: 600 !important;
     }
   </style>
 </head>
