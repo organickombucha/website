@@ -165,47 +165,40 @@
     }
     /* Move "KOBA ORGANICS" even higher (-10rem) + extend green background downward */
     .footer_bottom {
-      margin-bottom: -10rem !important; /* very strong upward shift */
+      margin-bottom: -10rem !important;
     }
     .footer_container {
-      padding-bottom: 12rem !important; /* extra green padding to cover the lifted area below */
+      padding-bottom: 12rem !important;
     }
     @media (max-width: 767px) {
       .footer_bottom {
-        margin-bottom: -6rem !important; /* adjusted for mobile */
+        margin-bottom: -6rem !important;
       }
       .footer_container {
         padding-bottom: 8rem !important;
       }
     }
 
-    /* ────────────────────────────────────────────────
-       ENHANCED IMAGE STYLING – bigger + positioned right behind heading
-    ──────────────────────────────────────────────── */
+    /* Image directly behind heading - no box, bigger, positioned right below */
     .hp_abt_img {
-      display: block !important;
-      width: 100% !important;
-      max-width: 1100px !important;          /* makes it significantly bigger */
-      height: auto !important;
-      margin: 4rem auto 5rem !important;     /* more space above (moves it down from heading) + generous bottom space */
-      position: relative !important;
-      left: auto !important;
-      top: auto !important;
-      transform: none !important;
-      border-radius: 16px !important;        /* optional: soft corners to match site aesthetic */
-      box-shadow: 0 12px 32px rgba(120, 64, 1, 0.12) !important; /* subtle lift */
+      display: block;
+      width: 100%;
+      max-width: 1100px;
+      height: auto;
+      margin: 3.5rem auto 5rem;
+      position: relative;
     }
 
     @media (min-width: 768px) {
       .hp_abt_img {
-        max-width: 1200px !important;        /* even larger on desktop */
-        margin: 5rem auto 7rem !important;   /* more dramatic spacing on larger screens */
+        max-width: 1200px;
+        margin: 4.5rem auto 6rem;
       }
     }
 
     @media (max-width: 600px) {
       .hp_abt_img {
-        margin: 3rem auto 4rem !important;   /* slightly less space on small screens */
+        margin: 2.5rem auto 4rem;
       }
     }
   </style>
@@ -367,9 +360,10 @@
       probiotic-rich fizz with flavour that actually shows up — not the face-scrunching
       vinegar punch you get from some other kombuchas.
     </p>
-    <h2>What makes KOBA… KOBA</h2><img src="images/Frame-1000009739.webp" loading="lazy" sizes="(max-width: 2231px) 100vw, 2231px"
-      srcset="images/Frame-1000009739-p-500.png 500w, images/Frame-1000009739-p-800.png 800w, images/Frame-1000009739-p-1080.png 1080w, images/Frame-1000009739-p-1600.png 1600w, images/Frame-1000009739-p-2000.png 2000w, images/Frame-1000009739.webp 2231w"
-      alt="" class="hp_abt_img">
+    <h2>What makes KOBA… KOBA</h2>
+    <img src="images/Frame-1000009739.webp" loading="lazy" sizes="(max-width: 2231px) 100vw, 2231px"
+         srcset="images/Frame-1000009739-p-500.png 500w, images/Frame-1000009739-p-800.png 800w, images/Frame-1000009739-p-1080.png 1080w, images/Frame-1000009739-p-1600.png 1600w, images/Frame-1000009739-p-2000.png 2000w, images/Frame-1000009739.webp 2231w"
+         alt="" class="hp_abt_img">
     <div class="feature-list">
       <div class="feature-box">
         <strong class="feature-title">🔥 Bold Flavours, No Compromises</strong>
