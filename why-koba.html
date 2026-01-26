@@ -178,13 +178,13 @@
         padding-bottom: 8rem !important;
       }
     }
-    /* Image very high + very slightly to the left – now right behind the heading with swing */
+    /* Image right behind "What makes KOBA… KOBA" heading + swing */
     .hp_abt_img {
       display: block;
       width: 100%;
       max-width: 95%;
       height: auto;
-      margin: 0 0 0 -4%;                 /* top margin 0 → right behind heading text, no gap */
+      margin: -1.5rem 0 0 -4%;           /* pulled up right behind heading text – no gap */
       position: relative;
       transform-origin: top center;
       animation: swing 8s ease-in-out infinite;
@@ -199,14 +199,14 @@
     @media (min-width: 768px) {
       .hp_abt_img {
         max-width: 90%;
-        margin: 0 0 0 -5%;               /* desktop: top margin 0 → right behind heading */
+        margin: -2.5rem 0 0 -5%;         /* desktop: tighter behind heading */
       }
     }
 
     @media (max-width: 600px) {
       .hp_abt_img {
         max-width: 100%;
-        margin: 0 auto 0;                /* mobile: top margin 0 → right behind heading */
+        margin: -1.2rem auto 0;          /* mobile: right behind heading */
       }
     }
   </style>
