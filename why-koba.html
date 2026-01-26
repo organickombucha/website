@@ -99,7 +99,7 @@
     .feature-list {
       display: grid;
       gap: 2.2rem;
-      margin: -8rem 0 4rem; /* boxes moved higher – changed from -7rem to -8rem */
+      margin: -7rem 0 4rem; /* boxes moved SLIGHTLY MORE UP – from -6.5rem to -7rem */
     }
     .feature-box {
       background-color: var(--box-bg);
@@ -178,7 +178,7 @@
         padding-bottom: 8rem !important;
       }
     }
-    /* Image very high + very slightly to the left – UNCHANGED */
+    /* Image very high + very slightly to the left + gentle swing animation */
     .hp_abt_img {
       display: block;
       width: 100%;
@@ -186,13 +186,23 @@
       height: auto;
       margin: -0.5rem 0 2rem -4%;
       position: relative;
+      transform-origin: top center; /* swing from the top */
+      animation: swing 8s ease-in-out infinite; /* gentle swing */
     }
+
+    @keyframes swing {
+      0%   { transform: rotate(-3deg); }
+      50%  { transform: rotate(3deg); }
+      100% { transform: rotate(-3deg); }
+    }
+
     @media (min-width: 768px) {
       .hp_abt_img {
         max-width: 90%;
         margin: -4rem 0 2.5rem -5%;
       }
     }
+
     @media (max-width: 600px) {
       .hp_abt_img {
         max-width: 100%;
