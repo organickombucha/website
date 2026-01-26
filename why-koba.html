@@ -147,23 +147,17 @@
       .intro-bold, .feature-subtext, .promise-bold { font-size: 1.3rem; }
     }
 
-    /* FINAL ALIGNMENT FIX - force homepage footer spacing */
+    /* FINAL ALIGNMENT FIX v3 - small natural gap like homepage, no touching lines */
     .footer_left_heading {
-      gap: 0.35rem !important;          /* exact match to homepage grid-row-gap */
+      gap: 0.5em !important;            /* restores original .5em gap from kobaorganics.css */
     }
-    .footer_left_heading p.heading-style-h5 {
-      margin: 0 !important;
-      padding: 0 !important;
-      line-height: 1.4 !important;      /* overrides body 1.68 → matches homepage 1.4 */
-      font-size: 1rem !important;
-      font-weight: 500 !important;
-    }
+    .footer_left_heading p.heading-style-h5,
     .footer_left_heading h2.heading-style-h4 {
       margin: 0 !important;
       padding: 0 !important;
-      line-height: 1 !important;
-      font-size: 1.25rem !important;
-      font-weight: 600 !important;
+    }
+    .footer_left_heading p.heading-style-h5 {
+      line-height: 1.45 !important;     /* slight reduction from body 1.68 → creates breathing room without squashing */
     }
   </style>
 </head>
