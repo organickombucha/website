@@ -68,7 +68,7 @@
     h2 {
       font-size: clamp(2.6rem, 6vw, 3.8rem);
       font-weight: 700;
-      margin: 8rem 0 3rem; /* added bottom margin to create space between heading and first box */
+      margin: 8rem 0 3rem;
       letter-spacing: -0.015em;
       line-height: 1.15;
       color: var(--text);
@@ -99,7 +99,7 @@
     .feature-list {
       display: grid;
       gap: 2.2rem;
-      margin: -10.5rem 0 4rem; /* boxes moved SLIGHTLY MORE UP – from -9rem to -10.5rem */
+      margin: -10.5rem 0 4rem;
     }
     .feature-box {
       background-color: var(--box-bg);
@@ -202,10 +202,66 @@
       }
     }
     @keyframes swing {
-  50%   { transform: rotate(-3deg); }
-  50%  { transform: rotate(3deg); }
-  50% { transform: rotate(-3deg); }
-}
+      50% { transform: rotate(-3deg); }
+      50% { transform: rotate(3deg); }
+      50% { transform: rotate(-3deg); }
+    }
+
+    /* Dropdown styles – reused from top nav / Why Koba */
+    .buy-dropdown {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #FFEEDB;
+      border: 1px solid #E0C9B0;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(120, 64, 1, 0.12);
+      min-width: 220px;
+      z-index: 100;
+      margin-top: 8px;
+      padding: 8px 0;
+      display: none;
+    }
+    .buy-dropdown.show { display: block; }
+    .buy-dropdown a {
+      display: block;
+      padding: 12px 20px;
+      color: #784001;
+      text-decoration: none;
+      font-weight: 500;
+      text-align: left;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .buy-dropdown a:hover { background: rgba(139, 69, 19, 0.08); }
+
+    /* MOBILE-ONLY: Hide icons + make BUY wider horizontally to match WHY KOBA */
+    @media screen and (max-width: 767px) {
+      /* Hide icons next to WHY KOBA and BUY */
+      .navbar_cta a[href="why-koba.html"] .button_arrow,
+      .navbar_cta .button.button-primary[onclick*="buyDropdown"] .button_arrow {
+        display: none !important;
+      }
+
+      /* Make BUY button vertically slightly taller to align with WHY KOBA */
+      .navbar_cta .button.button-primary[onclick*="buyDropdown"] {
+        padding-top: 0.8em !important;
+        padding-bottom: 0.8em !important;
+        min-height: 54px !important;
+        align-items: center !important;
+        display: inline-flex !important;
+      }
+      .navbar_cta .button.button-primary[onclick*="buyDropdown"] .button_text_content.is-1,
+      .navbar_cta .button.button-primary[onclick*="buyDropdown"] .button_text_content.is-2 {
+        line-height: 1.15 !important;
+      }
+
+      /* Make BUY button horizontally wider to match WHY KOBA */
+      .navbar_cta .button.button-primary[onclick*="buyDropdown"] {
+        padding-left: 1.4em !important;
+        padding-right: 1.4em !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -257,36 +313,6 @@
                 position: relative;
                 overflow: hidden;
               }
-              .buy-dropdown {
-                position: absolute;
-                top: 100%;
-                right: 0;
-                background: #FFEEDB;
-                border: 1px solid #E0C9B0;
-                border-radius: 12px;
-                box-shadow: 0 8px 20px rgba(120, 64, 1, 0.12);
-                min-width: 220px;
-                z-index: 100;
-                margin-top: 8px;
-                padding: 8px 0;
-                display: none;
-              }
-              .buy-dropdown.show {
-                display: block;
-              }
-              .buy-dropdown a {
-                display: block;
-                padding: 12px 20px;
-                color: #784001;
-                text-decoration: none;
-                font-weight: 500;
-                text-align: left;
-                white-space: nowrap;
-                transition: background 0.2s;
-              }
-              .buy-dropdown a:hover {
-                background: rgba(139, 69, 19, 0.08);
-              }
             </style>
             <div class="navbar_cta">
               <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x6ad65cbcdbcb5931:0xd2612d9bb907481e?entry=s&sa=X&ved=2ahUKEwjW_Ynp6b6RAxX9klYBHXMlMgsQ4kB6BAgUEAA&hl=en"
@@ -333,12 +359,12 @@
                 </div>
                 <div class="button_arrow">
                   <div class="button_arrow_icon is-1 w-embed">
-                    <svg width="100%" height="100%" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="100%" height="100%" viewBox="0 0 11 11" fill="none" xmlns="https://www.w3.org/2000/svg">
                       <path d="M0.351562 0.5H10.3516M10.3516 0.5V10.5M10.3516 0.5L0.351562 10.5" stroke="white"></path>
                     </svg>
                   </div>
                   <div class="button_arrow_icon is-2 w-embed">
-                    <svg width="100%" height="100%" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="100%" height="100%" viewBox="0 0 11 11" fill="none" xmlns="https://www.w3.org/2000/svg">
                       <path d="M0.351562 0.5H10.3516M10.3516 0.5V10.5M10.3516 0.5L0.351562 10.5" stroke="white"></path>
                     </svg>
                   </div>
@@ -356,6 +382,7 @@
       </div>
     </div>
   </div>
+
   <main class="why-koba">
     <h1>WHY KOBA</h1>
     <h2>Fizz that hits different.<br>Sip bold. Feel unstoppable.</h2>
@@ -408,6 +435,7 @@
       <tr><td>Sodium</td><td>2 mg</td><td>7 mg</td></tr>
     </table>
   </main>
+
   <div class="footer">
     <div class="footer_wave w-embed">
       <style>
@@ -490,6 +518,7 @@
       </div>
     </div>
   </div>
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const footer = document.querySelector(".footer");
