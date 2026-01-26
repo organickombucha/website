@@ -165,13 +165,19 @@
       padding: 0 !important;
     }
 
-    /* Move "KOBA ORGANICS" up by -4rem (very close to content above) */
+    /* Move "KOBA ORGANICS" even higher (-5rem → -7rem) but keep green background below it */
     .footer_bottom {
-      margin-bottom: -4rem !important;   /* strong upward shift */
+      margin-bottom: -7rem !important;   /* strong upward shift */
+    }
+    .footer_container {
+      padding-bottom: 9rem !important;   /* extra padding so green extends down far enough */
     }
     @media (max-width: 767px) {
       .footer_bottom {
-        margin-bottom: -3rem !important;   /* reduced on mobile to avoid overlap */
+        margin-bottom: -4rem !important;   /* reduced on mobile */
+      }
+      .footer_container {
+        padding-bottom: 6rem !important;   /* adjusted for mobile */
       }
     }
   </style>
