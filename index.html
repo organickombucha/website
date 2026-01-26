@@ -69,16 +69,21 @@
       background: rgba(139, 69, 19, 0.08);
     }
 
-    /* MOBILE-ONLY: Make BUY button vertically slightly taller to align with WHY KOBA */
+    /* MOBILE-ONLY: Hide icons (arrows/tick) next to WHY KOBA and BUY buttons */
     @media screen and (max-width: 767px) {
-      .navbar_cta .button.button-primary[onclick*="buyDropdown"] {
-        padding-top: 0.8em    !important;   /* ← slightly increased from 0.75em */
-        padding-bottom: 0.8em !important;
-        min-height: 54px      !important;
-        align-items: center   !important;
-        display: inline-flex  !important;
+      .navbar_cta a[href="why-koba.html"] .button_arrow,
+      .navbar_cta .button.button-primary[onclick*="buyDropdown"] .button_arrow {
+        display: none !important;
       }
 
+      /* MOBILE-ONLY: Make BUY button vertically slightly taller to align with WHY KOBA */
+      .navbar_cta .button.button-primary[onclick*="buyDropdown"] {
+        padding-top: 0.8em !important;
+        padding-bottom: 0.8em !important;
+        min-height: 54px !important;
+        align-items: center !important;
+        display: inline-flex !important;
+      }
       /* Keep text layers centered vertically */
       .navbar_cta .button.button-primary[onclick*="buyDropdown"] .button_text_content.is-1,
       .navbar_cta .button.button-primary[onclick*="buyDropdown"] .button_text_content.is-2 {
