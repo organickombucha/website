@@ -69,14 +69,14 @@
       background: rgba(139, 69, 19, 0.08);
     }
 
-    /* MOBILE-ONLY: Make BUY button vertically taller to match WHY KOBA height */
+    /* MOBILE-ONLY: Make BUY button vertically slightly taller to align with WHY KOBA */
     @media screen and (max-width: 767px) {
       .navbar_cta .button.button-primary[onclick*="buyDropdown"] {
-        padding-top: 0.75em    !important;
-        padding-bottom: 0.75em !important;
-        min-height: 52px       !important;
-        align-items: center    !important;
-        display: inline-flex   !important;
+        padding-top: 0.8em    !important;   /* ← slightly increased from 0.75em */
+        padding-bottom: 0.8em !important;
+        min-height: 54px      !important;
+        align-items: center   !important;
+        display: inline-flex  !important;
       }
 
       /* Keep text layers centered vertically */
