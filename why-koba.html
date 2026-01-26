@@ -189,22 +189,14 @@
       transform-origin: top center;
       animation: swing 8s ease-in-out infinite;
     }
-    @media (min-width: 768px) {
-      .hp_abt_img {
-        max-width: 90%;
-        margin: -4rem 0 2.5rem -5%;
-      }
-    }
-    @media (max-width: 600px) {
-      .hp_abt_img {
-        max-width: 100%;
-        margin: -2.8rem auto 1.8rem;
-      }
-    }
     @keyframes swing {
       50% { transform: rotate(-3deg); }
       50% { transform: rotate(3deg); }
       50% { transform: rotate(-3deg); }
+    }
+    @keyframes updown {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-10px); }
     }
 
     /* Dropdown styles – reused from top nav / Why Koba */
@@ -235,7 +227,7 @@
     }
     .buy-dropdown a:hover { background: rgba(139, 69, 19, 0.08); }
 
-    /* MOBILE-ONLY: Hide icons + make BUY wider + vertical adjustment + more space below heading */
+    /* MOBILE-ONLY rules */
     @media screen and (max-width: 767px) {
       /* Hide icons next to WHY KOBA and BUY */
       .navbar_cta a[href="why-koba.html"] .button_arrow,
@@ -269,7 +261,12 @@
 
       /* Add more space between h2 heading and first feature box on mobile only */
       .feature-list {
-        margin-top: -6rem !important; /* ← moved from -8rem to -6rem → more visible space */
+        margin-top: -6rem !important;
+      }
+
+      /* Change image animation to up-down movement (like desktop) on mobile */
+      .hp_abt_img {
+        animation: updown 8s ease-in-out infinite !important;
       }
     }
   </style>
