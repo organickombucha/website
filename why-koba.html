@@ -99,7 +99,7 @@
     .feature-list {
       display: grid;
       gap: 2.2rem;
-      margin: 1.2rem 0 4rem;           /* boxes kept pulled up high */
+      margin: 1rem 0 4rem;               /* boxes stay high */
     }
     .feature-box {
       background-color: var(--box-bg);
@@ -179,26 +179,26 @@
       }
     }
 
-    /* Image very high – almost touching the heading text from below */
+    /* Image as high as possible – zero top margin, directly right behind the text */
     .hp_abt_img {
       display: block;
       width: 100%;
       max-width: 1100px;
       height: auto;
-      margin: 0.6rem auto 2.5rem;           /* extremely small top margin → right behind / very close to text */
+      margin: 0 auto 2.5rem;              /* 0 top margin → touches / right behind the heading text */
       position: relative;
     }
 
     @media (min-width: 768px) {
       .hp_abt_img {
         max-width: 1200px;
-        margin: 0.8rem auto 3rem;           /* still very close on desktop */
+        margin: 0 auto 3rem;
       }
     }
 
     @media (max-width: 600px) {
       .hp_abt_img {
-        margin: 0.5rem auto 2rem;
+        margin: 0 auto 2rem;
       }
     }
   </style>
