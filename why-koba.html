@@ -99,7 +99,7 @@
     .feature-list {
       display: grid;
       gap: 2.2rem;
-      margin: -7.5rem 0 4rem;           /* boxes moved EVEN MORE UP – very strong overlap into image */
+      margin: -7rem 0 4rem;           /* boxes moved SLIGHTLY MORE UP – increased from -6.5rem to -7rem */
     }
     .feature-box {
       background-color: var(--box-bg);
@@ -178,25 +178,25 @@
         padding-bottom: 8rem !important;
       }
     }
-    /* Image very high + very slightly to the left – but slightly lower than before */
+    /* Image very high + very slightly to the left */
     .hp_abt_img {
       display: block;
       width: 100%;
       max-width: 95%;
       height: auto;
-      margin: -1rem 0 2rem -4%;          /* top margin less negative → image slightly lower */
+      margin: -0.5rem 0 2rem -4%;
       position: relative;
     }
     @media (min-width: 768px) {
       .hp_abt_img {
         max-width: 90%;
-        margin: -2rem 0 2.5rem -5%;      /* desktop: also less pulled up → slightly lower */
+        margin: -4rem 0 2.5rem -5%;
       }
     }
     @media (max-width: 600px) {
       .hp_abt_img {
         max-width: 100%;
-        margin: -1.5rem auto 1.8rem;     /* mobile: slightly lower */
+        margin: -2.8rem auto 1.8rem;
       }
     }
   </style>
