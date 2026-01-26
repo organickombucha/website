@@ -167,38 +167,17 @@
 
     /* Move "KOBA ORGANICS" even higher (-10rem) + extend green background downward */
     .footer_bottom {
-      margin-bottom: -10rem !important;
+      margin-bottom: -10rem !important;   /* very strong upward shift */
     }
     .footer_container {
-      padding-bottom: 12rem !important;
+      padding-bottom: 12rem !important;   /* extra green padding to cover the lifted area below */
     }
     @media (max-width: 767px) {
       .footer_bottom {
-        margin-bottom: -6rem !important;
+        margin-bottom: -6rem !important;   /* adjusted for mobile */
       }
       .footer_container {
         padding-bottom: 8rem !important;
-      }
-    }
-
-    /* UPDATED FIX: Move "Socials" and "Find and Buy" MORE TO THE RIGHT (like homepage) */
-    .footer_right {
-      justify-content: flex-end !important;   /* anchor to the right side */
-      margin-right: -1rem !important;         /* slight left pull — reduced from -3rem so it moves rightward */
-      gap: 2.5rem !important;
-      padding-left: 0 !important;
-    }
-    @media (max-width: 991px) {
-      .footer_right {
-        margin-right: 0 !important;
-        gap: 2rem !important;
-      }
-    }
-    @media (max-width: 767px) {
-      .footer_right {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        margin-right: 0 !important;
       }
     }
   </style>
