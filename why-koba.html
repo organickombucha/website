@@ -149,7 +149,6 @@
 
     /* FINAL FOOTER ALIGNMENT FIX – 2-line wrap + exact spacing & width like homepage */
     .footer_left_heading {
-      max-width: 320px !important;
       width: 100% !important;
       gap: 0.6em !important;
     }
@@ -167,18 +166,46 @@
 
     /* Move "KOBA ORGANICS" even higher (-10rem) + extend green background downward */
     .footer_bottom {
-      margin-bottom: -10rem !important;   /* very strong upward shift */
+      margin-bottom: -10rem !important;
     }
     .footer_container {
-      padding-bottom: 12rem !important;   /* extra green padding to cover the lifted area below */
+      padding-bottom: 12rem !important;
     }
     @media (max-width: 767px) {
       .footer_bottom {
-        margin-bottom: -6rem !important;   /* adjusted for mobile */
+        margin-bottom: -6rem !important;
       }
       .footer_container {
         padding-bottom: 8rem !important;
       }
+    }
+
+    /* FIX EMAIL INPUT + BUTTON WIDTH TO MATCH HOMEPAGE */
+    .footer_left .form {
+      width: 100% !important;
+      max-width: 380px !important;           /* matches homepage visual width */
+      position: relative !important;
+    }
+    .footer_input {
+      width: 100% !important;
+      padding-right: 7.5rem !important;     /* space for button */
+      font-size: 1rem !important;
+      font-weight: 700 !important;
+      height: 46px !important;
+      border-radius: 9999px !important;
+      background-color: var(--background) !important;
+      color: var(--green) !important;
+      border: none !important;
+    }
+    .footer_button_submit {
+      position: absolute !important;
+      top: 0.5em !important;
+      right: 0.5em !important;
+      bottom: 0.5em !important;
+      width: 6.5em !important;
+      font-size: 0.875rem !important;
+      padding: 0 !important;
+      border-radius: 9999px !important;
     }
   </style>
 </head>
