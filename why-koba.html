@@ -99,7 +99,7 @@
     .feature-list {
       display: grid;
       gap: 2.2rem;
-      margin: 0.3rem 0 4rem;           /* boxes moved even higher / closer under image */
+      margin: 0.1rem 0 4rem;           /* boxes moved EVEN HIGHER – almost touching image bottom */
     }
     .feature-box {
       background-color: var(--box-bg);
@@ -179,27 +179,27 @@
       }
     }
 
-    /* Image very high + shifted to the right */
+    /* Image very high + shifted TO THE LEFT */
     .hp_abt_img {
       display: block;
       width: 100%;
-      max-width: 85%;                    /* narrower so it can shift right without overflowing */
+      max-width: 85%;                    /* narrower to allow left shift */
       height: auto;
-      margin: -3.5rem 0 2rem 15%;        /* negative top → very high | left margin 15% → shifted right */
+      margin: -3.5rem 0 2rem -10%;       /* negative top → high | negative left → shifted LEFT */
       position: relative;
     }
 
     @media (min-width: 768px) {
       .hp_abt_img {
         max-width: 80%;
-        margin: -4rem 0 2.5rem 18%;      /* more right shift on desktop */
+        margin: -4rem 0 2.5rem -12%;     /* stronger left shift on desktop */
       }
     }
 
     @media (max-width: 600px) {
       .hp_abt_img {
         max-width: 90%;
-        margin: -2.8rem auto 1.8rem;     /* center on small screens, no heavy right shift */
+        margin: -2.8rem auto 1.8rem;     /* center on mobile, no heavy left shift */
       }
     }
   </style>
