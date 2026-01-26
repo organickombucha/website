@@ -438,9 +438,7 @@
         const windowHeight = window.innerHeight;
         let progress = 1 - rect.top / windowHeight;
         progress = Math.max(0, Math.min(1, progress));
-        // Desktop / Tablet movement
         let maxMove = -30;
-        // On screens < 478px: only move from -30 to -40
         if (window.innerWidth < 478) {
           const start = -30;
           const end = -40;
@@ -448,7 +446,6 @@
           wave.style.transform = `translateX(${mobileMove}%)`;
           return;
         }
-        // Default movement
         wave.style.transform = `translateX(${progress * maxMove}%)`;
       }
       window.addEventListener("scroll", animateWave);
@@ -469,7 +466,6 @@
         "&f_id=0081afe0f0" +
         "&c=mcCallback" +
         "&EMAIL=" + encodeURIComponent(email);
-      // remove duplicate JSONP scripts
       const oldScript = document.getElementById("mc-script");
       if (oldScript) oldScript.remove();
       const script = document.createElement("script");
@@ -477,18 +473,14 @@
       script.src = url;
       document.body.appendChild(script);
     });
-    // JSONP callback
     function mcCallback(response) {
       if (response.result === "success") {
         console.log("Success:", response.msg);
         alert("🎉 Success! You are subscribed.");
-        // ✅ Clear the email input
         document.getElementById("EMAIL").value = "";
       } else {
         console.log("Error:", response.msg);
         alert("❌ Error: " + response.msg);
-        // If you ALSO want to clear on error, uncomment:
-        // document.getElementById("EMAIL").value = "";
       }
     }
   </script>
