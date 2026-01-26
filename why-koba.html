@@ -99,7 +99,7 @@
     .feature-list {
       display: grid;
       gap: 2.2rem;
-      margin: 1.5rem 0 4rem;           /* reduced top margin → boxes moved up closer to image/heading */
+      margin: 1.2rem 0 4rem;           /* boxes kept pulled up high */
     }
     .feature-box {
       background-color: var(--box-bg);
@@ -179,26 +179,26 @@
       }
     }
 
-    /* Image placed right behind the heading text – higher, bigger, no box */
+    /* Image very high – almost touching the heading text from below */
     .hp_abt_img {
       display: block;
       width: 100%;
       max-width: 1100px;
       height: auto;
-      margin: 1.2rem auto 2.5rem;           /* very small top margin → sits right behind / close to the text */
+      margin: 0.6rem auto 2.5rem;           /* extremely small top margin → right behind / very close to text */
       position: relative;
     }
 
     @media (min-width: 768px) {
       .hp_abt_img {
         max-width: 1200px;
-        margin: 1.5rem auto 3rem;           /* slightly more space on desktop but still very close */
+        margin: 0.8rem auto 3rem;           /* still very close on desktop */
       }
     }
 
     @media (max-width: 600px) {
       .hp_abt_img {
-        margin: 1rem auto 2rem;
+        margin: 0.5rem auto 2rem;
       }
     }
   </style>
