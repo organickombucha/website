@@ -99,7 +99,7 @@
     .feature-list {
       display: grid;
       gap: 2.2rem;
-      margin: -1.5rem 0 4rem;            /* boxes pulled EVEN MORE UP – stronger overlap into image */
+      margin: -2rem 0 4rem;              /* boxes moved EVEN MORE UP – strong overlap into image bottom */
     }
     .feature-box {
       background-color: var(--box-bg);
@@ -179,27 +179,27 @@
       }
     }
 
-    /* Image very high + very slightly to the left (subtle shift) */
+    /* Image very high + very slightly to the left */
     .hp_abt_img {
       display: block;
       width: 100%;
       max-width: 95%;
       height: auto;
-      margin: -3.5rem 0 2rem -4%;        /* negative top → high | small negative left → very slightly left of center */
+      margin: -3.5rem 0 2rem -4%;
       position: relative;
     }
 
     @media (min-width: 768px) {
       .hp_abt_img {
         max-width: 90%;
-        margin: -4rem 0 2.5rem -5%;      /* slightly more pronounced left shift on desktop */
+        margin: -4rem 0 2.5rem -5%;
       }
     }
 
     @media (max-width: 600px) {
       .hp_abt_img {
         max-width: 100%;
-        margin: -2.8rem auto 1.8rem;     /* fully centered on mobile for better mobile view */
+        margin: -2.8rem auto 1.8rem;
       }
     }
   </style>
