@@ -181,16 +181,16 @@
       }
     }
 
-    /* UPDATED FIX: Pull "Socials" and "Find and Buy" MORE TO THE LEFT (matching homepage) */
+    /* UPDATED FIX: Move "Socials" and "Find and Buy" MORE TO THE RIGHT (like homepage) */
     .footer_right {
-      justify-content: flex-start !important;
-      margin-right: -1rem !important;     /* stronger left pull – increase to -4rem if still too right */
-      gap: 2.5rem !important;             /* tighter gap between Socials & Find and Buy */
+      justify-content: flex-end !important;   /* anchor to the right side */
+      margin-right: -1rem !important;         /* slight left pull — reduced from -3rem so it moves rightward */
+      gap: 2.5rem !important;
       padding-left: 0 !important;
     }
     @media (max-width: 991px) {
       .footer_right {
-        margin-right: -0.5rem !important; /* less aggressive on tablet/mobile */
+        margin-right: 0 !important;
         gap: 2rem !important;
       }
     }
